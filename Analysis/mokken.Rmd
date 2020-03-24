@@ -1,0 +1,130 @@
+---
+title: "Mokken scale analysis"
+output: 
+  html_document:
+    code_folding: "hide"
+    theme: cosmo
+    toc: true
+    toc_float: true
+    tables: TRUE
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(drake)
+conflicted::conflict_prefer("select", "dplyr")
+conflicted::conflict_prefer("filter", "dplyr")
+library(citippy)
+library(mokken)
+citippy::citippy_path(here::here("Analysis/references.bib"))
+citippy::citippy_options(pandoc = FALSE)
+
+
+Item <- c("My mouth is dry",
+          "My lips are dry",
+          "My tongue is thick",
+          "My saliva is thick",
+          "My throat is dry",
+          "I have a bad taste in my mouth",
+          "I want to drink water")
+```
+
+
+
+## Preparation 
+
+First we will load in a dataframe of items included in the PTDS.
+
+```{r }
+reactable::reactable(data = readd(ptds_factor),
+                     resizable = TRUE, 
+              showPageSizeOptions = TRUE, 
+              onClick = "expand", 
+              highlight = TRUE,
+              filterable=TRUE
+              )
+```
+
+### Correlation plot
+
+```{r fig.align="center"}
+## convert to numeric and drop one participant with missing data
+readd(corr_plot)
+```
+
+
+## Automatic item selection procedure
+
+The first step in Mokken scale analysis is to determine how many scales there may be in the bank of items that were assessed.  The `aisp` fuction is used to determine which items cluster with each other. We will use a lower bound of 0.5 to determine clustering of items.
+
+```{r}
+knitr::kable(readd(aisp), caption = "aisp for increasing H thresholds (*c*)")
+```
+
+Based on the aisp table, the item `bad_taste` is excluded by selecting the remaining items which show unidimensionality at a threshold level of .50. No multi-dimensional solution is apparent from this table (no groups of items identified as ‘leaving to form another scale’ at the same homogeneity threshold).
+
+The 6 items are further examined below for MSA criteria.
+
+
+## Scalability coefficient
+
+The next step is to calculate the scalability coefficient **H**, which is an index of homogeneity for item pairs, using the `coefH` function.
+
+```{r results='asis'}
+knitr::kable(readd(H_values_ptds6)$Hi, caption = "Homogeneity values (and standard errors) for items")
+```
+
+
+The complete item set has a homogeneity value H(se) = `r readd(H_values_ptds6)$H`. These results indicate a strong Mokken scale for the items in the PTDS.
+
+
+## Monotonicity
+
+Results indicate that there were no significant violations of the assumption of monotonicity (z-sig). As such, no items were removed.
+
+```{r}
+knitr::kable(readd(monotonicity_df_ptds6), caption = "monotonicity with default minsize")
+```
+
+## Inspection of item pairs
+
+To assess intersection and proximity, plots of item-pairs were produced. We can see that only one of the item-pair plots displays intersection (dry throat and dry lips). 
+
+```{r fig.align='center'}
+plot(readd(iio_ptds6),  plot.ci=FALSE, ask = FALSE)
+```
+
+
+## Invariant item ordering
+
+Analysis of invariant item ordering using the `check.iio` command revealed violations for the dry throat/dry lips item pair, but there were no *significant* intersections between items. Crit values less than 40 are considered acceptable.`r citippy(c('molenaar2000mps5'))` Due to the intersection between the dry throat and dry lips items, crit values were above 40. For this reason, we will exclude one of these items (dry throat), and re-assess the items for the assumptions of Mokken scaling.
+
+```{r}
+knitr::kable(summary(readd(iio_ptds6))$item.summary)
+```
+
+With the dry throat item removed, we now see that none of the items violate the assumption of invariant item ordering.
+
+
+```{r}
+knitr::kable(summary(readd(iio_ptds5))$item.summary)
+```
+
+## Accuracy
+
+The accuracy of the item ordering was found to be acceptable with a H~T~ coefficient of `r readd(accuracy_ptds5)`. Values below 0.3 are unacceptable and above 0.4 indicates moderate invariant item ordering.`r citippy('Ligtvoet_2010')` 
+
+## Reliability
+
+Scale reliability was adequate with a coeffient score (Rho) of `r readd(reliability_ptds5)`.
+
+## Item difficulty hierarchy
+
+```{r results = 'asis'}
+knitr::kable(readd(item_hierarchy_df_ptds5), caption = "Item hierarchy")
+```
+
+The 5-item PTDS has a homogeneity value H(se) = `r readd(H_values_ptds5)$H`.
+
+

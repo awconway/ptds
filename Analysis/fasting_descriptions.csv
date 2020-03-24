@@ -1,0 +1,301 @@
+"","id","fasting_description"
+"1","R001","No food after midnight, water with pills in morning"
+"2","R001",NA
+"3","R001",NA
+"4","R002","No foods or liquids after midnight "
+"5","R002",NA
+"6","R002",NA
+"7","R003","No food or drink after midnight"
+"8","R003",NA
+"9","R003",NA
+"10","R004","No food or drink after midnight"
+"11","R004",NA
+"12","R004",NA
+"13","S001",NA
+"14","S002",NA
+"15","S003",NA
+"16","S004",NA
+"17","S005",NA
+"18","S006",NA
+"19","S007",NA
+"20","S008",NA
+"21","S009",NA
+"22","S010",NA
+"23","S011",NA
+"24","S012",NA
+"25","S013",NA
+"26","S014",NA
+"27","S015",NA
+"28","S016",NA
+"29","S017",NA
+"30","S018",NA
+"31","S019",NA
+"32","S020",NA
+"33","S021",NA
+"34","S022",NA
+"35","S023",NA
+"36","S024",NA
+"37","S025",NA
+"38","S026",NA
+"39","S027",NA
+"40","S028",NA
+"41","S029",NA
+"42","S030",NA
+"43","S031",NA
+"44","S032",NA
+"45","S033",NA
+"46","S034",NA
+"47","S035",NA
+"48","S036",NA
+"49","S037",NA
+"50","S038",NA
+"51","S039",NA
+"52","S040",NA
+"53","S041",NA
+"54","S042",NA
+"55","S043",NA
+"56","S044",NA
+"57","S045",NA
+"58","S046",NA
+"59","S047",NA
+"60","S048",NA
+"61","S049",NA
+"62","S050",NA
+"63","S051",NA
+"64","S052",NA
+"65","S053",NA
+"66","S054",NA
+"67","S055",NA
+"68","S056",NA
+"69","S057",NA
+"70","S058",NA
+"71","S059",NA
+"72","S060",NA
+"73","S061",NA
+"74","S062",NA
+"75","S063",NA
+"76","S064",NA
+"77","S065",NA
+"78","S066",NA
+"79","S067",NA
+"80","S068",NA
+"81","S069",NA
+"82","S070",NA
+"83","S071",NA
+"84","S072",NA
+"85","S073",NA
+"86","S074",NA
+"87","S075",NA
+"88","S076",NA
+"89","S077",NA
+"90","S078",NA
+"91","S079",NA
+"92","S080",NA
+"93","S081",NA
+"94","S082",NA
+"95","S083",NA
+"96","S084",NA
+"97","S085",NA
+"98","S086",NA
+"99","S087",NA
+"100","S088",NA
+"101","S089",NA
+"102","S090",NA
+"103","S091",NA
+"104","S092",NA
+"105","S093",NA
+"106","S094",NA
+"107","S095",NA
+"108","S096",NA
+"109","S097",NA
+"110","S098",NA
+"111","S099",NA
+"112","S100",NA
+"113","S101",NA
+"114","S102",NA
+"115","S103",NA
+"116","S104",NA
+"117","S105",NA
+"118","S106",NA
+"119","S107",NA
+"120","S108",NA
+"121","S109",NA
+"122","S110",NA
+"123","S111",NA
+"124","S112",NA
+"125","S113",NA
+"126","S114",NA
+"127","S115",NA
+"128","S116",NA
+"129","S117",NA
+"130","S118",NA
+"131","S119",NA
+"132","S120",NA
+"133","S121",NA
+"134","S122",NA
+"135","S123",NA
+"136","S124",NA
+"137","S125",NA
+"138","S126",NA
+"139","S127",NA
+"140","S128",NA
+"141","S129",NA
+"142","S130",NA
+"143","S131",NA
+"144","S132",NA
+"145","S133",NA
+"146","S134",NA
+"147","S135",NA
+"148","S136",NA
+"149","S137",NA
+"150","S138",NA
+"151","S139",NA
+"152","S140",NA
+"153","S141",NA
+"154","S142",NA
+"155","S143",NA
+"156","S144",NA
+"157","S145",NA
+"158","S146",NA
+"159","S147",NA
+"160","S148",NA
+"161","S149",NA
+"162","V001","Food stop at midnight, couple sips of water with pills this morn"
+"163","V002","Don't eat or drink anything 4 hours before procedure, can take sip of water with pills in morning"
+"164","V003","No eating or drinking after midnight only a sip of water with medication"
+"165","V004","Don't eat or drink after midnight"
+"166","V006","Don't eat or drink after midnight"
+"167","V007","Don't eat or drink anything after midnight "
+"168","V008","12 hours; nothing after midnight"
+"169","V009","No food or fluids after midnight"
+"170","V010","No foods or fluids after midnight"
+"171","V011","No food or fluids 6 hours prior"
+"172","V012","No food or fluids 6 hours prior to procedure"
+"173","V013","No eating or drinking after 12."
+"174","V014","Patient mentioned ""my memory is foggy, I can't remember exactly, but I understood them, read them and followed them."" Patients partner said the instructions were ""Don't eat or drink after midnight."""
+"175","V015","Don't eat or drink anything after midnight "
+"176","V016","No food or drink after midnight, can have small sip of water with pills in morning"
+"177","V017","No food or drinks after midnight"
+"178","V018","Don't eat or drink after 12 midnight"
+"179","V019","Don't eat after 4am (6 hrs prior to procedure)"
+"180","V020","No food or drink after midnight "
+"181","V021","Client stated difficulty with instructions due to language barrier, but easy once explained by spouse. Client could not remember but spouse said ""No food or drink after dinner"""
+"182","V022","""Eat light breakfast before 06:30, I can't remember about drinking"""
+"183","V023","No food or fluids 6 hours prior to procedure"
+"184","V024","No food or fluids 6 hours prior to procedure"
+"185","V025","No food or drink after midnight"
+"186","V026","No food or fluids after midnight"
+"187","V027","No food, drinks, or medication after midnight"
+"188","V028","No food or drinks 6 hours before procedure"
+"189","V029","Received two separate instructions: 1) No food or drinks after midnight 2) No food or drinks 6 hours prior to procedure "
+"190","V030","No food or drinks after midnight"
+"191","V031","No food or drinks 6 hours before procedure "
+"192","V032","No food or drink 10 hours before procedure"
+"193","V033","Do not eat or drink 6 hours prior to procedure, called to clarify if small sips could be taken with morning pills"
+"194","V034","No eating or drinking after midnight or twelve hours before"
+"195","V035","Don't drink or eat 6 hours prior to procedure"
+"196","V036","No eat or drink after midnight"
+"197","V037","No eating or drinking after midnight"
+"198","V038","Don't eat or drink for 6 hours prior to procedure"
+"199","V039","Don't eat within 6 hours of procedure"
+"200","V040","Don't eat or drink for 12 hours prior to procedure"
+"201","V041","Don't eat or drink after 6 am "
+"202","V042","No food or drink After midnight"
+"203","V043","Nothing to eat or drink for 6 hours prior to procedure"
+"204","V044","Given 2 sets of instructions. Don't each/drink 4 hours prior and also don't eat/drink 6 hours prior. "
+"205","V045","Nothing to eat/drink after 12AM midnight."
+"206","V046","No food/drink after 6am. Light breakfast. "
+"207","V047","Don't eat/drink for 12 hours before procedure."
+"208","V048","Don't eat/drink for 6 hours before procedure."
+"209","V049","Nothing to eat/drink after midnight."
+"210","V050","No eating /drinking after 12am midnight."
+"211","V051","Nothing to eat/drink after midnight."
+"212","V052","No food/drink after midnight."
+"213","V053","No food 12 hours prior. No drink after 0600 this morning."
+"214","V054","Nothing after midnight."
+"215","V055","4 hours before procedure, stop eating/drinking."
+"216","V056","No drinking or eating after midnight"
+"217","V057","No food or drinks 6 hours prior to procedure "
+"218","V058","No food or drinks after midnight"
+"219","V059","No fluids or foods after midnight"
+"220","V060","No food or fluids 6 hours prior to procedure "
+"221","V061","No fluids or food 6 hours before the procedure "
+"222","V062","No food, drinks, or medication after midnight"
+"223","V063","No fluids or food 6 hours prior to procedure "
+"224","V064","No fluids or food after midnight "
+"225","V065","Don't eat or drink for 7 hr prior to procedure"
+"226","V066","No eat or drink after midnight, can have a mouthful of water with morning pills"
+"227","V067","I can't recall, but it was emailed to me and I followed it"
+"228","V068","Don't eat after 20:00 last night"
+"229","V069","Don't eat or for 6 hours prior to procedure"
+"230","V071","No eating or drinking after midnight "
+"231","V072","No food or drink after midnight "
+"232","V073","No food or drink after midnight"
+"233","V074","No food or drink for 6 hrs prior to procedure"
+"234","V075","no food or drink after 6am"
+"235","V076","No food or drink  7 hours prior to procedure"
+"236","V077","No eating or drinking for 5 hrs prior to procedure"
+"237","V078","No eating or drinking after midnight "
+"238","V079","Nothing to eat or drink for 6 hours prior to procedure"
+"239","V080","No eating or drinking for 6 hours prior to procedure"
+"240","V081","No eating or drinking after midnight prior to the procedure"
+"241","V082","No eating or drinking after midnight, small sips with morning pills"
+"242","V083","No eating or drinking 4 hours prior to procedure"
+"243","V085","No food or drink  after midnight, can have small sips of water with pills "
+"244","V086","No eating or drinking for 6 hours prior to procedure"
+"245","V087","No eating or drinking 6 hours prior to procedure "
+"246","V088","No drinking after 0730, no eating after midnight "
+"247","V089","No fluids or drinks 6 to 8 hours prior to procedure "
+"248","V090","Patient reported not finding ""no instructions on the form"" but knew not to eat or drink prior to procedure because of having it done previously "
+"249","V091","Nothing after midnight "
+"250","V092","No food or drink after midnight, small sips with pills in morning"
+"251","V093","No food or drink after midnight"
+"252","V094","No food or drink 6 hours prior to procedure"
+"253","V095","No food or drink after midnight, small sips with pills "
+"254","V096","No food or drink after midnight "
+"255","V097","No food or drink after midnight, small sips with pills"
+"256","V098","No food or drink after midnight, sips with pills
+"
+"257","V099","No food or drink after 6am"
+"258","V100","No drinking, not time frame given, no information regarding not eating "
+"259","V101","No eating or drinking after midnight"
+"260","V102","No eating or drinking for 6 hrs prior to procedure"
+"261","V103","No eating or drinking for 6 hours prior to procedure"
+"262","V104","No food after 7 pm, no restrictions on drinking"
+"263","V105","No food or drink after midnight "
+"264","V106","No drink or food after midnight "
+"265","V107","No food or drink after midnight"
+"266","V108","No food or drink after midnight, small sips with morning pills"
+"267","V109","No eating or drinks for 6 hours prior to procedure"
+"268","V110","No food or drink for after midnight, small sips with pills"
+"269","V111","A light breakfast at 6am, no food or drink after that"
+"270","V112","No food or drink after midnight "
+"271","V113","Nothing after midnight "
+"272","V114","No food or drinks after midnight"
+"273","V115","No food or drinks after midnight"
+"274","V116","No food or drinks after midnight "
+"275","V117","No food or drinks after midnight "
+"276","V118","6 hours fasting and only sips of water for medication "
+"277","V119","No food or drinks after midnight "
+"278","V120","No eating or drinking"
+"279","V121","No food or drinks 6 hours prior to procedure "
+"280","V124","No food or drink after midnight, small sips with pills"
+"281","V125","No food or drink after midnight "
+"282","V126","No eating or drinking for 6 hours prior to procedure"
+"283","V127","No eating or drink for 6 hours prior to procedure"
+"284","V128","No food or drink 6 hours prior to procedure, small sips with morning pills"
+"285","V129","Able to eat a light breakfast the day of the procedure, but no food or drink after 0700 "
+"286","V130","Light breakfast before 0700, no food or drink after that"
+"287","V131","Light breakfast before 0630 on morning of procedure, NPO after that. "
+"288","V132","No eating or drinking until biopsy done"
+"289","V133",NA
+"290","V134","No food or drinks 6 hours before the procedure "
+"291","V135","No food or drink for 6 hours prior to procedure, small sips with pills"
+"292","V136","No food or drink after midnight"
+"293","V137","No food or drink after midnight, sips with morning pills"
+"294","V138","No food or drink after midnight"
+"295","V139","No food or drink after midnight "
+"296","V140","No food or drink after 7 am "
+"297","V141","No food or drink after 7 am. "
+"298","V142","No food or drink after 7am"
+"299","V143","Light breakfast around 7, no food or drink after that"
