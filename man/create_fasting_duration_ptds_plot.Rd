@@ -4,7 +4,7 @@
 \alias{create_fasting_duration_ptds_plot}
 \title{}
 \usage{
-create_fasting_duration_ptds_plot(data)
+create_fasting_duration_ptds_plot(data = data_ptds, fluids_corr, food_corr)
 }
 \value{
 

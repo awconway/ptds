@@ -8,17 +8,21 @@
 #' @importFrom ggtext element_markdown geom_richtext
 #' @importFrom dplyr summarize mutate
 #' @importFrom glue glue
-create_fasting_duration_ptds_plot <- function(data) {
+#' @importFrom tibble tibble
+create_fasting_duration_ptds_plot <- function(data = data_ptds,
+  fluids_corr, food_corr) {
 
-  ptds_fluids_cor <- data %>%
-    drop_na(ptds, fluids_duration) %>%
-    summarize(r_square = cor(ptds, fluids_duration)^2) %>%
-    mutate(
+rho <- round(fluids_corr$rho, 2)
+rho_low <- round(fluids_corr$CI_low, 2)
+rho_high <- round(fluids_corr$CI_high, 2)
+
+  ptds_fluids_cor <- tibble(
       # location of each text label in data coordinates
-      ptds = 14,
+      ptds = 15,
       fluids_duration = 20,
-      # text label containing r^2 value
-      label = glue("*r*<sup>2</sup> = {round(r_square, 2)}")
+      # text label containing rho value
+      label = glue("*rho* = {rho}
+      (95% CI = {rho_low} to {rho_high})")
     )
 
   fluids <- data %>%
@@ -29,7 +33,7 @@ create_fasting_duration_ptds_plot <- function(data) {
     theme_minimal() +
     labs(
       x = "\nDuration of fasting from <span style='color:dodgerblue'>fluids</span> in hours",
-      y = "PTDS-5 (5-15; higher scores indicate worse thirst discomfort)\n"
+      y = "PTDS-5\n"
     ) +
     theme(
       legend.position = "none",
@@ -40,7 +44,7 @@ create_fasting_duration_ptds_plot <- function(data) {
     ggtext::geom_richtext(
       data = ptds_fluids_cor,
       aes(label = label),
-      hjust = 1, vjust = 1
+      hjust = 1, vjust = 2
     )
 
   ptds_food_cor <- data %>%
@@ -54,6 +58,19 @@ create_fasting_duration_ptds_plot <- function(data) {
       label = glue("*r*<sup>2</sup> = {round(r_square, 2)}")
     )
 
+    rho <- round(food_corr$rho, 2)
+rho_low <- round(food_corr$CI_low, 2)
+rho_high <- round(food_corr$CI_high, 2)
+
+  ptds_food_cor <- tibble(
+      # location of each text label in data coordinates
+      ptds = 15,
+      food_duration = 25,
+      # text label containing rho value
+      label = glue("*rho* = {rho}
+      (95% CI = {rho_low} to {rho_high})")
+    )
+
  food <-  data %>%
    ggplot(aes(y = ptds, x = food_duration)) +
    geom_jitter(alpha = 0.5,
@@ -62,7 +79,7 @@ create_fasting_duration_ptds_plot <- function(data) {
    theme_minimal() +
    labs(
      x = "\nDuration of fasting from <span style='color:orangered'>food</span> in hours",
-     y = "PTDS-5 (5-15; higher scores indicate worse thirst discomfort)\n"
+     y = "PTDS-5\n"
    ) +
    theme(
      legend.position = "none",
@@ -72,11 +89,11 @@ create_fasting_duration_ptds_plot <- function(data) {
    ggtext::geom_richtext(
      data = ptds_food_cor,
      aes(label = label),
-     hjust = 1, vjust = 1
+     hjust = 1, vjust = 2
    )
 
 
- fluids + food
+ fluids / food
 
 
   ggsave(device = "png", filename = here("manuscript/figures/fasting.png"),

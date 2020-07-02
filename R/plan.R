@@ -38,11 +38,26 @@ get_analysis_plan <- function() {
     ),
     data_ptds = add_ptds_total(ptds5, participation_df), # data with total ptds score added
     summary_table = create_summary_table(data_ptds),
-    global_thirst_plot = create_global_thirst_plot(data_ptds),
-    thirst_intensity_plot = create_thirst_intensity_plot(data_ptds),
-    fasting_duration_ptds_plot = create_fasting_duration_ptds_plot(data_ptds),
+    global_thirst_plot = create_global_thirst_plot(
+      data = data_ptds,
+      global_thirst_corr = global_thirst_corr
+    ),
+    thirst_intensity_plot = create_intensity_plot(data = data_ptds,
+    intensity_corr = intensity_corr),
+    fasting_duration_ptds_plot = create_fasting_duration_ptds_plot(data_ptds,
+    fluids_corr, food_corr),
     age_plot = create_age_ptds_plot(data_ptds),
     DT = create_DT(data_ptds),
+    distribution_plot = create_distribution_plot(data_ptds),
+
+    # correlations
+
+    global_thirst_corr = create_global_thirst_corr(data_ptds),
+intensity_corr = create_intensity_corr(data_ptds),
+fluids_corr = create_fluids_corr(data_ptds),
+food_corr = create_food_corr(data_ptds),
+pain_corr = create_pain_corr(data_ptds),
+
 
     manuscript = target(
       command = {
