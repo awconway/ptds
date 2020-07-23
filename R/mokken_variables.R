@@ -8,9 +8,9 @@ mokken_variables <- function(participation_df) {
   # variables for mokken scaling
   participation_df %>%
     select(starts_with("ptds")) %>%
-    select(ends_with("factor")) %>%
+    select(!ends_with("factor")) %>%
     rename_all(.funs = ~ str_remove_all(., "ptds_")) %>%
-    rename_all(.funs = ~ str_remove_all(., "_factor")) %>%
-    mutate_if(is.factor, ~ as.numeric(.x)) %>%
+    #rename_all(.funs = ~ str_remove_all(., "_factor")) %>%
+    #mutate_if(is.factor, ~ as.numeric(.x)) %>%
     as.data.frame()
 }

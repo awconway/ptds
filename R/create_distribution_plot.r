@@ -4,20 +4,21 @@
 #' @importFrom ggplot2 ggplot aes theme_minimal scale_x_continuous
 #' labs element_blank theme ggsave geom_histogram
 create_distribution_plot <- function(data_ptds) {
-    data_ptds %>%
+    distribution_plot <- data_ptds %>%
         ggplot(aes(x = ptds)) +
-        geom_histogram(binwidth = 0.5) +
-        theme_minimal() +
+        geom_histogram(binwidth = 0.5, colour = "#2a6ebb", fill = "#2a6ebb") +
         labs(
             y = "Count",
-            x = "\nPTDS-5 (range is 5 to 15; higher scores indicate worse thirst discomfort)"
+            x = "\nPTDS-5 (range is 0 to 10; higher scores indicate worse thirst discomfort)"
         ) +
         scale_x_continuous(
-            breaks = c(seq(5, 15, by = 1))
+            breaks = seq(0, 10, by = 1)
+        ) +
+        theme(
+            panel.background = element_blank(),
+            legend.position = "none",
+            axis.ticks.x = element_blank(),
+            axis.ticks.y = element_blank(),
+            text = element_text(family = "BioRhyme")
         )
-
-    ggsave(
-        device = "png", filename = here("manuscript/figures/distribution.png"),
-        width = 174, units = "mm"
-    )
 }

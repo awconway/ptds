@@ -9,21 +9,22 @@
 #' @importFrom dplyr summarize mutate
 #' @importFrom glue glue
 #' @importFrom tibble tibble
-create_fasting_duration_ptds_plot <- function(data = data_ptds,
-  fluids_corr, food_corr) {
 
-rho <- round(fluids_corr$rho, 2)
-rho_low <- round(fluids_corr$CI_low, 2)
-rho_high <- round(fluids_corr$CI_high, 2)
+create_fasting_duration_ptds_plot <- function(data = data_ptds,
+                                              fluids_corr, food_corr) {
+
+  rho <- round(fluids_corr$rho, 2)
+  rho_low <- round(fluids_corr$CI_low, 2)
+  rho_high <- round(fluids_corr$CI_high, 2)
 
   ptds_fluids_cor <- tibble(
-      # location of each text label in data coordinates
-      ptds = 15,
-      fluids_duration = 20,
-      # text label containing rho value
-      label = glue("*rho* = {rho}
+  # location of each text label in data coordinates
+  ptds = 10,
+  fluids_duration = 20,
+  # text label containing rho value
+  label = glue("*rho* = {rho}
       (95% CI = {rho_low} to {rho_high})")
-    )
+  )
 
   fluids <- data %>%
     ggplot(aes(y = ptds, x = fluids_duration)) +
@@ -45,57 +46,49 @@ rho_high <- round(fluids_corr$CI_high, 2)
       data = ptds_fluids_cor,
       aes(label = label),
       hjust = 1, vjust = 2
+    ) +
+    scale_y_continuous(
+      breaks = seq(0, 10, by = 2)
     )
 
-  ptds_food_cor <- data %>%
-    drop_na(ptds, food_duration) %>%
-    summarize(r_square = cor(ptds, food_duration)^2) %>%
-    mutate(
-      # location of each text label in data coordinates
-      ptds = 14,
-      food_duration = 25,
-      # text label containing r^2 value
-      label = glue("*r*<sup>2</sup> = {round(r_square, 2)}")
-    )
-
-    rho <- round(food_corr$rho, 2)
-rho_low <- round(food_corr$CI_low, 2)
-rho_high <- round(food_corr$CI_high, 2)
+  rho <- round(food_corr$rho, 2)
+  rho_low <- round(food_corr$CI_low, 2)
+  rho_high <- round(food_corr$CI_high, 2)
 
   ptds_food_cor <- tibble(
-      # location of each text label in data coordinates
-      ptds = 15,
-      food_duration = 25,
-      # text label containing rho value
-      label = glue("*rho* = {rho}
+  # location of each text label in data coordinates
+  ptds = 10,
+  food_duration = 25,
+  # text label containing rho value
+  label = glue("*rho* = {rho}
       (95% CI = {rho_low} to {rho_high})")
+  )
+
+  food <- data %>%
+    ggplot(aes(y = ptds, x = food_duration)) +
+    geom_jitter(alpha = 0.5,
+                colour = "orangered") +
+    geom_smooth(method = "lm") +
+    theme_minimal() +
+    labs(
+      x = "\nDuration of fasting from <span style='color:orangered'>food</span> in hours",
+      y = "PTDS-5\n"
+    ) +
+    theme(
+      legend.position = "none",
+      axis.title.x = element_markdown(),
+      plot.title.position = "plot"
+    ) +
+    ggtext::geom_richtext(
+      data = ptds_food_cor,
+      aes(label = label),
+      hjust = 1, vjust = 2
+    ) +
+    scale_y_continuous(
+      breaks = seq(0, 10, by = 2)
     )
 
- food <-  data %>%
-   ggplot(aes(y = ptds, x = food_duration)) +
-   geom_jitter(alpha = 0.5,
-               colour = "orangered") +
-   geom_smooth(method = "lm") +
-   theme_minimal() +
-   labs(
-     x = "\nDuration of fasting from <span style='color:orangered'>food</span> in hours",
-     y = "PTDS-5\n"
-   ) +
-   theme(
-     legend.position = "none",
-     axis.title.x = element_markdown(),
-     plot.title.position = "plot"
-   ) +
-   ggtext::geom_richtext(
-     data = ptds_food_cor,
-     aes(label = label),
-     hjust = 1, vjust = 2
-   )
 
+  fluids / food
 
- fluids / food
-
-
-  ggsave(device = "png", filename = here("manuscript/figures/fasting.png"),
-         width = 174, units = "mm")
 }

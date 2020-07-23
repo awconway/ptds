@@ -6,7 +6,9 @@
 #' @importFrom dplyr select
 #' @importFrom here here
 #' @importFrom drake drake_plan knitr_in
+#' @importFrom ggplot2 ggsave
 #'
+
 get_analysis_plan <- function() {
   drake_plan(
     original_data = read_csv(here("data/ThirstDiscomfortScal_DATA_2020-03-24_2016.csv")),
@@ -42,22 +44,98 @@ get_analysis_plan <- function() {
       data = data_ptds,
       global_thirst_corr = global_thirst_corr
     ),
-    thirst_intensity_plot = create_intensity_plot(data = data_ptds,
-    intensity_corr = intensity_corr),
-    fasting_duration_ptds_plot = create_fasting_duration_ptds_plot(data_ptds,
-    fluids_corr, food_corr),
+    global_thirst_plot_png = ggsave(
+      plot = global_thirst_plot,
+      device = "png", filename = here("manuscript/figures/global-thirst.png"),
+      width = 174, units = "mm"
+    ),
+    thirst_intensity_plot = create_intensity_plot(
+      data = data_ptds,
+      intensity_corr = intensity_corr
+    ),
+
+    thirst_intensity_plot_png = ggsave(
+      plot = thirst_intensity_plot,
+      device = "png",
+      filename = here("manuscript/figures/thirst-intensity.png"),
+      width = 174, units = "mm"
+    ),
+
+    fasting_duration_ptds_plot = create_fasting_duration_ptds_plot(
+      data_ptds,
+      fluids_corr, food_corr
+    ),
+
+    fasting_duration_ptds_plot_png = ggsave(
+      plot = fasting_duration_ptds_plot,
+      device = "png",
+      filename = here("manuscript/figures/fasting.png"),
+      width = 174, units = "mm"
+    ),
+
     age_plot = create_age_ptds_plot(data_ptds),
     DT = create_DT(data_ptds),
     distribution_plot = create_distribution_plot(data_ptds),
+    distribution_plot_png = ggsave(
+      plot = distribution_plot,
+      device = "png",
+      filename = here("manuscript/figures/distribution.png"),
+      width = 174,
+      units = "mm"
+    ),
 
     # correlations
 
     global_thirst_corr = create_global_thirst_corr(data_ptds),
-intensity_corr = create_intensity_corr(data_ptds),
-fluids_corr = create_fluids_corr(data_ptds),
-food_corr = create_food_corr(data_ptds),
-pain_corr = create_pain_corr(data_ptds),
+    intensity_corr = create_intensity_corr(data_ptds),
+    fluids_corr = create_fluids_corr(data_ptds),
+    food_corr = create_food_corr(data_ptds),
+    pain_corr = create_pain_corr(data_ptds),
 
+    # deviations
+
+    coded_descriptions = read.csv(
+      here::here("Analysis/fasting_descriptions_complete.csv")
+    ),
+
+    deviation_plot = create_deviation_plot(
+      data_ptds = data_ptds,
+      coded_descriptions = coded_descriptions
+    ),
+    deviation_plot_png = ggsave(
+      plot = deviation_plot,
+      filename = here("plots", "fasting-deviation-plot.png"),
+      height = 15,
+      width = 12,
+      units = "in",
+      device = "png"
+    ),
+    deviation_plot_svg = ggsave(
+      plot = deviation_plot,
+      filename = here("plots", "fasting-deviation-plot.svg"),
+      height = 15,
+      width = 12,
+      units = "in",
+      device = "svg"
+    ),
+
+    # instructions
+
+    clarity_plot = create_clarity_plot(data_ptds),
+    clarity_plot_png = ggsave(
+      plot = clarity_plot,
+      filename = here("plots", "clarity-plot.svg"),
+      device = "svg"
+    ),
+    instructions_plot = create_instruction_plot(
+      data_ptds = data_ptds,
+      coded_descriptions = coded_descriptions
+    ),
+    instructions_plot_svg = ggsave(
+      plot = instructions_plot,
+      filename = here("plots", "instructions_plot.svg"),
+      device = "svg"
+    ),
 
     manuscript = target(
       command = {
