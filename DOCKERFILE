@@ -12,6 +12,7 @@ RUN install2.r --error \
     patchwork \
     ggtext \
     ggbeeswarm \
+    ggcorrplot \
     correlation
 
 

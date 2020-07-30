@@ -94,48 +94,48 @@ get_analysis_plan <- function() {
 
     # deviations
 
-    coded_descriptions = read.csv(
-      here::here("Analysis/fasting_descriptions_complete.csv")
-    ),
+    #coded_descriptions = read.csv(
+    #  here::here("Analysis/fasting_descriptions_complete.csv")
+    #),
 
-    deviation_plot = create_deviation_plot(
-      data_ptds = data_ptds,
-      coded_descriptions = coded_descriptions
-    ),
-    deviation_plot_png = ggsave(
-      plot = deviation_plot,
-      filename = here("plots", "fasting-deviation-plot.png"),
-      height = 15,
-      width = 12,
-      units = "in",
-      device = "png"
-    ),
-    deviation_plot_svg = ggsave(
-      plot = deviation_plot,
-      filename = here("plots", "fasting-deviation-plot.svg"),
-      height = 15,
-      width = 12,
-      units = "in",
-      device = "svg"
-    ),
-
-    # instructions
-
-    clarity_plot = create_clarity_plot(data_ptds),
-    clarity_plot_png = ggsave(
-      plot = clarity_plot,
-      filename = here("plots", "clarity-plot.svg"),
-      device = "svg"
-    ),
-    instructions_plot = create_instruction_plot(
-      data_ptds = data_ptds,
-      coded_descriptions = coded_descriptions
-    ),
-    instructions_plot_svg = ggsave(
-      plot = instructions_plot,
-      filename = here("plots", "instructions_plot.svg"),
-      device = "svg"
-    ),
+    #deviation_plot = create_deviation_plot(
+    #  data_ptds = data_ptds,
+    #  coded_descriptions = coded_descriptions
+    #),
+    #deviation_plot_png = ggsave(
+    #  plot = deviation_plot,
+    #  filename = here("plots", "fasting-deviation-plot.png"),
+    #  height = 15,
+    #  width = 12,
+    #  units = "in",
+    #  device = "png"
+    #),
+    #deviation_plot_svg = ggsave(
+    #  plot = deviation_plot,
+    #  filename = here("plots", "fasting-deviation-plot.svg"),
+    #  height = 15,
+    #  width = 12,
+    #  units = "in",
+    #  device = "svg"
+    #),
+    #
+    ## instructions
+    #
+    #clarity_plot = create_clarity_plot(data_ptds),
+    #clarity_plot_png = ggsave(
+    #  plot = clarity_plot,
+    #  filename = here("plots", "clarity-plot.svg"),
+    #  device = "svg"
+    #),
+    #instructions_plot = create_instruction_plot(
+    #  data_ptds = data_ptds,
+    #  coded_descriptions = coded_descriptions
+    #),
+    #instructions_plot_svg = ggsave(
+    #  plot = instructions_plot,
+    #  filename = here("plots", "instructions_plot.svg"),
+    #  device = "svg"
+    #),
 
     manuscript = target(
       command = {
