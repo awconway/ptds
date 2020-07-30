@@ -1,7 +1,7 @@
-##' @title Bounds
-##' @param x data frame
-##' @return
-##' @export
+#' @title Bounds
+#' @param x data frame
+#' @return
+#' @export
 #' @importFrom mokken aisp
 moscales_lowerbounds <- function(x, lowerbounds = seq(from = 0.05, to = 0.80, by = 0.05)) {
   ret.value <- NULL

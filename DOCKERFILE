@@ -1,0 +1,17 @@
+FROM rocker/verse:latest
+
+RUN install2.r --error \
+    drake \
+    mokken \
+    flextable \
+    officer \
+    officedown \
+    here \
+    gtsummary \
+    glue \
+    patchwork \
+    ggtext \
+    ggbeeswarm \
+    correlation
+
+
