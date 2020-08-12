@@ -83,6 +83,13 @@ get_analysis_plan <- function() {
       width = 174,
       units = "mm"
     ),
+    distribution_plot_pdf = ggsave(
+      plot = distribution_plot,
+      device = "pdf",
+      filename = here("manuscript/figures/distribution.pdf"),
+      width = 174,
+      units = "mm"
+    ),
 
     # correlations
 
@@ -137,11 +144,17 @@ get_analysis_plan <- function() {
     #  device = "svg"
     #),
 
-    manuscript = target(
+    # manuscript = target(
+    #   command = {
+    #     rmarkdown::render(knitr_in("manuscript/index.Rmd"))
+    #     file_out("manuscript/index.docx")
+    #   }
+    # ),
+    manuscript_pdf = target(
       command = {
         rmarkdown::render(knitr_in("manuscript/index.Rmd"))
-        file_out("manuscript/index.docx")
+        file_out("manuscript/index.pdf")
       }
-    ),
+    )
   )
 }

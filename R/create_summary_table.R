@@ -15,6 +15,5 @@ create_summary_table <- function(data_ptds) {
         fluids_duration ~ "Time since last clear fluids (hours)",
         food_duration ~ "Time since last food (hours)"
       )
-    ) %>%
-    italicize_labels()
+    )
 }
