@@ -13,18 +13,18 @@
 create_fasting_duration_ptds_plot <- function(data = data_ptds,
                                               fluids_corr, food_corr) {
 
-  rho <- round(fluids_corr$rho, 2)
-  rho_low <- round(fluids_corr$CI_low, 2)
-  rho_high <- round(fluids_corr$CI_high, 2)
-
-  ptds_fluids_cor <- tibble(
-  # location of each text label in data coordinates
-  ptds = 10,
-  fluids_duration = 20,
-  # text label containing rho value
-  label = glue("*rho* = {rho}
-      (95% CI = {rho_low} to {rho_high})")
-  )
+  # rho <- round(fluids_corr$rho, 2)
+  # rho_low <- round(fluids_corr$CI_low, 2)
+  # rho_high <- round(fluids_corr$CI_high, 2)
+  #
+  # ptds_fluids_cor <- tibble(
+  # # location of each text label in data coordinates
+  # ptds = 10,
+  # fluids_duration = 20,
+  # # text label containing rho value
+  # label = glue("*rho* = {rho}
+  #     (95% CI = {rho_low} to {rho_high})")
+  # )
 
   fluids <- data %>%
     ggplot(aes(y = ptds, x = fluids_duration)) +
@@ -39,30 +39,30 @@ create_fasting_duration_ptds_plot <- function(data = data_ptds,
     theme(
       legend.position = "none",
       plot.title.position = "plot",
-      axis.title.x = element_markdown()
-
+      axis.title.x = element_markdown(),
+      text = element_text(size=9)
     ) +
-    ggtext::geom_richtext(
-      data = ptds_fluids_cor,
-      aes(label = label),
-      hjust = 1, vjust = 2
-    ) +
+    # ggtext::geom_richtext(
+    #   data = ptds_fluids_cor,
+    #   aes(label = label),
+    #   hjust = 1, vjust = 2
+    # ) +
     scale_y_continuous(
       breaks = seq(0, 10, by = 2)
     )
 
-  rho <- round(food_corr$rho, 2)
-  rho_low <- round(food_corr$CI_low, 2)
-  rho_high <- round(food_corr$CI_high, 2)
-
-  ptds_food_cor <- tibble(
-  # location of each text label in data coordinates
-  ptds = 10,
-  food_duration = 25,
-  # text label containing rho value
-  label = glue("*rho* = {rho}
-      (95% CI = {rho_low} to {rho_high})")
-  )
+  # rho <- round(food_corr$rho, 2)
+  # rho_low <- round(food_corr$CI_low, 2)
+  # rho_high <- round(food_corr$CI_high, 2)
+  #
+  # ptds_food_cor <- tibble(
+  # # location of each text label in data coordinates
+  # ptds = 10,
+  # food_duration = 25,
+  # # text label containing rho value
+  # label = glue("*rho* = {rho}
+  #     (95% CI = {rho_low} to {rho_high})")
+  # )
 
   food <- data %>%
     ggplot(aes(y = ptds, x = food_duration)) +
@@ -77,13 +77,14 @@ create_fasting_duration_ptds_plot <- function(data = data_ptds,
     theme(
       legend.position = "none",
       axis.title.x = element_markdown(),
-      plot.title.position = "plot"
+      plot.title.position = "plot",
+      text = element_text(size=9)
     ) +
-    ggtext::geom_richtext(
-      data = ptds_food_cor,
-      aes(label = label),
-      hjust = 1, vjust = 2
-    ) +
+    # ggtext::geom_richtext(
+    #   data = ptds_food_cor,
+    #   aes(label = label),
+    #   hjust = 1, vjust = 2
+    # ) +
     scale_y_continuous(
       breaks = seq(0, 10, by = 2)
     )

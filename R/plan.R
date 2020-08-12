@@ -49,6 +49,11 @@ get_analysis_plan <- function() {
       device = "png", filename = here("manuscript/figures/global-thirst.png"),
       width = 174, units = "mm"
     ),
+    global_thirst_plot_pdf = ggsave(
+      plot = global_thirst_plot,
+      device = "pdf", filename = here("manuscript/figures/global-thirst.pdf"),
+      width = 174, units = "mm"
+    ),
     thirst_intensity_plot = create_intensity_plot(
       data = data_ptds,
       intensity_corr = intensity_corr
@@ -152,8 +157,8 @@ get_analysis_plan <- function() {
     # ),
     manuscript_pdf = target(
       command = {
-        rmarkdown::render(knitr_in("manuscript/index.Rmd"))
-        file_out("manuscript/index.pdf")
+        rmarkdown::render(knitr_in("manuscript/manuscript.Rmd"))
+        file_out("manuscript/manuscript.pdf")
       }
     )
   )

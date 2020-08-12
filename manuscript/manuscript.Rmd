@@ -1,5 +1,5 @@
 ---
-title: A Template for Two or One-Column Vignettes
+title: Mokken scale analysis of the perioperative thirst discomfort scale
 
 # Use letters for affiliations
 author:
@@ -13,76 +13,42 @@ author:
 #   - code: b
 #     address: Department of Neat Tricks, Whereever State University, Someplace, MC, 67890
     
-# Optional: line of arbitrary text with additional information.
+date_subtitle: "Blinded for peer review"
 # Could be used, for example, to mention the bibliographic info in a post-print.
 # If not specified, defaults to "This version was compiled on \today"
-#date_subtitle: Published in *Journal of Statistical Software*, 2018
 
 # For footer text  TODO(fold into template, allow free form two-authors)
-lead_author_surname: Author and Author
+lead_author_surname: Conway et al.
 
 # Place eg a DOI URL or CRAN Package URL here
-doi_footer: "https://cran.r-project.org/package=YourPackage"
+doi_footer: "Data and statistical code is available [here](https://github.com/awconway/ptds)"
 
 # Abstract
 abstract: |
-  Your abstract will be typeset here, and used by default a visually distinctive font.
-  An abstract should explain to the general reader the major contributions of the article. 
-
-# Optional: Acknowledgements
-acknowledgements: |
-  This template package builds upon, and extends, the work of the excellent
-  [rticles](https://cran.r-project.org/package=rticles) package, and both packages rely on the
-  [PNAS LaTeX](http://www.pnas.org/site/authors/latex.xhtml) macros. Both these sources are
-  gratefully acknowledged as this work would not have been possible without them.  Our extensions
-  are under the same respective licensing term
-  ([GPL-3](https://www.gnu.org/licenses/gpl-3.0.en.html) and
-  [LPPL (>= 1.3)](https://www.latex-project.org/lppl/)).
+   *Introduction:* Symptoms of thirst discomfort are common in patients who are required to undergo long periods of fasting prior to medical and surgical procedures. The aim of this study was to examine the validity and reliability of the perioperative thirst discomfort scale for measuring thirst discomfort prior to procedures.
+   *Methods:* A prospective observational study was conducted. Patients who were fasted and scheduled for an elective cardiac or interventional radiology procedure were included. Mokken scaling analysis was conducted to investigate the unidimensionality and hierarchical nature of the scale. Correlations between perioperative thirst discomfort scale scores and fasting durations were calculated to evaluate construct validity and convergent validity was evaluated by comparing scores with global thirst discomfort and thirst intensity ratings.
+   *Results:* 
+   *Conclusion:* The items in the PTDS-5 form a strong Mokken scale, meaning it is a reliable and precise way to order patients according to their thirst discomfort. Nurses may use this simple scale to assess the severity of thirst discomfort in patients who are fasted prior to procedures and initiate interventions according to individual needs.
 
 # Optional: One or more keywords
 keywords:
-  - one
-  - two
-  - optional
-  - keywords
-  - here
-
-# Paper size for the document, values of letter and a4
-papersize: letter
-
-# Font size of the document, values of 9pt (default), 10pt, 11pt and 12pt
-fontsize: 9pt
-
-# Optional: Force one-column layout, default is two-column
-#one_column: true
-
-# Optional: Enables lineno mode, but only if one_column mode is also true
-#lineno: true
-
-# Optional: Enable one-sided layout, default is two-sided
-#one_sided: true
-
-# Optional: Enable section numbering, default is unnumbered
-#numbersections: true
-
-# Optional: Specify the depth of section number, default is 5
-#secnumdepth: 5
-
-# Optional: Skip inserting final break between acknowledgements, default is false
-skip_final_break: true
+  - fasting
+  - anesthesia
+  - thirst discomfort
+  - patient-reported outcomes
+  - scale validation
+  - mokken scale analysis
 
 # Optional: Bibliography 
 bibliography: references
-
-# Optional: Enable a 'Draft' watermark on the document
-#watermark: true
 
 # Customize footer, eg by referencing the vignette
 footer_contents: "Perioperative thirst discomfort scale"
 
 # Produce a pinp document
 output: pinp::pinp
-
+params: 
+  word: false
 ---
 
 ```{r global_options, include=FALSE}
@@ -100,7 +66,9 @@ drake::loadd(intensity_corr)
 ```
 
 
-
+```{r eval=params$word, results='asis'}
+cat(
+"
 ## Abstract
 
 ### Introduction
@@ -137,9 +105,12 @@ Conflicts of interest: The authors declare no competing interests.
 
 Author contributions: AC: Study design, data analysis and wrote manuscript; KC: Study design, revised the manuscript for important intellectual content; MB: Data collection, revised the manuscript for important intellectual content; DP: Data collection, revised the manuscript for important intellectual content; NK: Study design, revised the manuscript for important intellectual content; AM: Study design, revised the manuscript for important intellectual content; MP: Study design, revised the manuscript for important intellectual content; SM: Study design, revised the manuscript for important intellectual content; SM: Study design, revised the manuscript for important intellectual content; PG: Study design, revised the manuscript for important intellectual content; SA: Study design, revised the manuscript for important intellectual content.
 
+"
+)
+```
 
 
-## Introduction
+# Introduction
 
 Pre-procedure fasting is used to reduce the risk of vomiting and aspiration pneumonia during sedation and general anaesthesia, or in case emergency intubation is required due to unexpected cardiac arrest.[@hamid2014pre; @osborne2002preoperative] However, prolonged fluid restriction causes thirst symptoms to develop (e.g., dry mouth, swollen tongue), which can lead to great discomfort.[@madsen1998perioperative] Current guidelines related to pre-procedure fasting for elective procedures recommend a minimum fasting period of 2 hours nil-per-os (NPO) for clear fluids.[@dobsonGuidelinesPracticeAnesthesia2018] Despite these recommendations, current practice is for patients undergoing surgical and other medical procedures that require sedation or anesthesia to receive standardized 'nil-by-mouth' fasting instructions at a pre-specified time interval before procedures. For example, 'no eating or drinking after midnight' is most common. This 'standardized' instruction will not be changed regardless of whether or not there are alterations in scheduling throughout the day that result in significant delays in procedure start time. As a result, fasting durations far exceed the recommended requirement for most patients undergoing medical and surgical procedures.[@de2014actual; @sorita2015frequency; @spitz2017impact] For example, in a recent study of 3641 fasting orders at a large academic institution in the USA, it was found that the median fasting duration was 12.8 hours, averaging 2 missed meals.[@sorita2015frequency]
 
@@ -149,26 +120,26 @@ Despite the relevance and value of assessing thirst-discomfort of patients, the 
 
 Although the initial validation of the PTDS was conducted in a different context (i.e. *post*-surgical patients), it demonstrates strong potential for accurately assessing thirst-discomfort more generally for peri-operative use. The aim of this study was to examine the validity and reliability of the PTDS for measuring thirst discomfort for patients who are fasting *before* medical procedures.
 
-## Methods
+# Methods
 
-### Study Design
+## Study Design
 
 This study used a prospective, observational design. No changes to usual clinical practice were made for this study in regard to pre-procedure fasting. Patients who were scheduled for a morning procedure were typically asked to remain nil-per-os (NPO) from midnight. Patients with afternoon procedures can have a small breakfast but must remain NPO from 6:00am on the day of the procedure. Ethical approval for this study (Ethical Committee N° 19-5585) was provided by the University Health Network Research Ethics Board, Toronto, Canada on October 31 2019.
 
-### Participants
+## Participants
 
-#### Inclusion criteria
+### Inclusion criteria
 
 Adult patients who were fasted and scheduled for an elective procedure in the Cardiac Catheterization Laboratories or in Interventional Radiology at an academic teaching hospital in Canada were included.
 
-#### Exclusion criteria
+### Exclusion criteria
 
 1.  Under 16 years of age
 2.  Undergoing an emergency procedure
 3.  Unable to understand or speak English and a translator is not immediately available
 4.  Nurse in pre-procedural bay considered that there was insufficient time prior to anticipated commencement of the procedure for participation in the study.
 
-### Data collection
+## Data collection
 
 A Research Assistant administered a brief questionnaire prior to procedures. It comprised the following components:
 
@@ -181,13 +152,13 @@ A Research Assistant administered a brief questionnaire prior to procedures. It 
 -   the time the patient last had any food;
 -   age, sex of patient and type of procedure to be performed.
 
-#### Measures
+### Measures
 
 The seven-item Perioperative Thirst Discomfort Scale (PTDS-7) is a 7-item self-reported, composite score evaluating the severity of dry mouth, lips, and throat, thick tongue and saliva, a bad taste in the mouth, and a desire to drink water. The total score can range from 0 to 14, with 14 representing the "most extreme" intensity of discomfort related to perioperative thirst. This instrument was developed and validated for perioperative use in a surgical centre at a public hospital in Brazil. Face validation was conducted by group consisting of nurses with PhDs, new graduate nurses, and patients. Content validation was conducted by a team consisting of specialists with perioperative nursing experience related to thirst or instrument validation. The reliability of the scale was assessed through inter-observer equivalence by a research nurse and a staff nurse from the Post Anesthesia Care Unit among 70 patients pre and postoperatively in an anesthetic recovery room. The Cronbach alpha score was 0.91. The time taken to complete the PTDS-7 was not evaluated.
 
 Participants used a global thirst discomfort score to rate their overall level of thirst discomfort on a rating scale with scores ranging from "extreme thirst discomfort" to "extreme comfort". Intensity of their thirst was rated on a scale ranging from 0 to 10, where 0 represents "No thirst" and 10 represents "Most intense thirst". The experience of pain may influence the participant's perception of thirst.[@Pierotti_2018] Participants were asked to rate their current level of pain on a scale of 0 to 10, where 0 represents "no pain" and 10 represents that their pain as "unimaginable/unspeakable". The use of oxygen therapy (e.g., via nasal prongs) may contribute to the experience of thirst symptoms (e.g., dry mouth, dry throat).[@conchon2015perioperative] The research assistant recorded "yes" or "no" as to whether the participant was currently receiving oxygen therapy at the time the questionnaire was administered.
 
-### Statistical analysis
+## Statistical analysis
 
 Mokken scaling is a method for establishing if items in a scale conform to a cumulative, hierarchical structure.[@perng2012construct] When an instrument contains hierarchically ordered items, the items can be ordered from those indicating mild to severe symptoms. An intentionally simple example of a hierarchical scale is a set of items enquiring about height that increases in increments of 10cm from 100cm to 200cm. In this example, taller people would endorse more items than those who were shorter.[@watson2008hierarchy]
 
@@ -199,38 +170,71 @@ Mokken scale analysis was conducted in this study to explore whether there were 
 
 Construct validity was evaluated by using correlations to identify associations between scores on the PTDS and fasting duration. To investigate construct validity we hypothesized that higher scores on the PTDS would be associated with greater fasting duration. Convergent validity was assessed by using Kendall's *tau* to compare the PTDS score with the global thirst discomfort score. Convergent validity was assessed by using the Spearman's rank correlation to compare the PTDS with the thirst intensity rating and pain scale rating.
 
-## Results
+# Results
 
 From November 2019 to March 2020, we screened 203 patients for inclusion in the study. A total of 198 were eligible and 194 participated. One participant did not complete 1 of the PTDS-7 items and was excluded from the analysis. A summary of participant characteristics is displayed in Table \@ref(tab:tab1). The median age was 62 (IQR 48 - 72) and 58% (n=111) were female. 43% of patients were scheduled to have their procedure in the cardiac catheterization laboratory. A biopsy was the most common interventional radiology procedure (n=62; 32%), but a wide range of other procedures were included. The mean duration of fasting from food and non-clear fluids was `r food` hours and clear fluids was `r fluids` hours.
 
-### Mokken scale analysis
+```{r tab.cap="Participant characteristics", tab.id = 'tab1'}
+drake::loadd(summary_table)
+# gtsummary::as_flextable(summary_table)
+gtsummary::as_kable_extra(summary_table, booktabs = T)
+```
+
+## Mokken scale analysis
 
 No items required removal from the PTDS-7 based on the condition that scalability coefficients (*H~i~* and lower bound of 95% CI) should be over 0.3 (Appendix Table \@ref(tab:Hvaluesptds7)). We used a lower bound for *c*, starting from 0.05 and increasing to 0.80 in 0.05 increments, to explore the dimensionality of the PTDS-7. From 0.05 to 0.45, all of the items formed a single scale. The item, '*I have a bad taste in my mouth*', was excluded by selecting the remaining items which showed uni-dimensionality at a threshold level of .50. The 6 remaining items (PTDS-6) were further examined for the criteria of a Mokken scale and item invariant ordering. The PTDS-6 item set has a homogeneity value *H(se)* of `r readd(H_values_ptds6)$H`, which indicated a strong Mokken scale. Results indicated that there were no significant violations of the assumption of monotonicity (z-sig). As such, no items were removed based on this criteria.
 
-#### Invariant item ordering
+### Invariant item ordering
 
 Analysis of invariant item ordering for the PTDS-6 revealed violations for the dry throat/dry lips item pair (Appendix Table \@ref(tab:iioptds6)). Although there were no *significant* intersections between items, due to the intersection between the dry throat and dry lips items, crit values were above 40. For this reason, we excluded one of these items (dry throat), and re-assessed the remaining 5 items for the assumptions of a Mokken scale. With the dry throat item removed, none of the items violated the assumption of invariant item ordering (Appendix Table \@ref(tab:iioptds5)).
 
-#### Accuracy and reliability
+### Accuracy and reliability
 
 The accuracy of the item ordering was found to be acceptable with a *H~T~* coefficient of `r drake::readd(accuracy_ptds5)`. Scale reliability was adequate with a coefficient score (Rho) of `r drake::readd(reliability_ptds5)`.
 
-#### Item difficulty hierarchy
+### Item difficulty hierarchy
 
 The item difficult hierarchy for the PTDS-5 is presented in Table \@ref(tab:tab2). The most highly endorsed symptom (i.e. the least severe symptom of thirst discomfort in the PTDS-5) was being bothered by a desire to drink water. The least endorsed symptom (i.e. the most severe symptom of thirst discomfort in the PTDS-5) was being bothered by the perception of a 'thick tongue'. The items in the PTDS-5 form a strong Mokken scale (H~s~ = `r drake::readd(H_values_ptds5)$H[1]`).
 
-```{r }
+```{r tab.id = "tab2", tab.cap= "Item hierarchy of the PTDS-5"}
 drake::readd(item_hierarchy_df_ptds5) %>% 
-  dplyr::select(item) 
+  kableExtra::kable(booktabs=T)
 ```
 
-### Construct and convergent validity
+## Construct and convergent validity
 
-The median PTDS-5 score was `r ptds5`. The distribution of PTDS-5 scores was right-skewed (Figure \@ref(fig:distribution)). There was a positive correlation between PTDS-5 scores and thirst intensity (Figure \@ref(fig:intensity)), as well as the global thirst discomfort rating (Figure \@ref(fig:globalthirst)). The associations between PTDS-5 scores with food and fluid duration is displayed in Figure \@ref(fig:fasting). Longer duration of fasting was not linearly associated with PTDS-5 scores. Likewise, the correlation between pain and PTDS-5 scores was not significant (Spearman's rho = `r round(drake::readd(pain_corr)$rho, 2)`; 95% CI = `r round(drake::readd(pain_corr)$CI_low, 2)` to `r round(drake::readd(pain_corr)$CI_high, 2)`).
+The median PTDS-5 score was `r ptds5`. The distribution of PTDS-5 scores was right-skewed (Figure \@ref(fig:distribution)). 
 
-## Discussion
+```{r distribution, fig.cap = "Distribution of PTDS-5 scores (higher scores indicate worse thirst discomfort)"}
+# knitr::include_graphics("figures/distribution.png")
+drake::readd(distribution_plot)
+```
 
-Results indicate that the PTDS-5 is a reliable and precise way to order patients according to their thirst discomfort in the *pre-procedure* period. In addition, an acceptable accuracy for invariant item ordering was identified, meaning patients are likely to rank the PTDS-5 symptoms of thirst discomfort in the same way. As such, the item difficulty hierarchy, presented in Table \@ref(tab:tab2) can be used as a guide to easily determine which patients are expriencing worse thirst discomfort. The hierarchical pattern of responses to items in the Mokken scale is interpretable in terms of respondents more easily endorsing items related to a general desire to drink water through to first endorsing more specific symptoms related to dryness of the mouth and lips prior to endorsing discomfort associated with the sensations of 'thick' saliva and 'thick' tongue. In more practical terms, a patient who reports feeling bothered by a sensation that saliva is thick, could be interpreted as experiencing worse thirst discomfort than a patient who did not endorse any of the items lower down on the item difficulty hierarchy (i.e. 'my lips are dry' and 'my mouth is dry').
+There was a positive correlation between PTDS-5 scores and thirst intensity (Figure \@ref(fig:intensity)), as well as the global thirst discomfort rating (Figure \@ref(fig:globalthirst)). The associations between PTDS-5 scores with food and fluid duration is displayed in Figure \@ref(fig:fasting). 
+
+```{r intensity, fig.cap="Association between PTDS-5 and thirst intensity. PTDS-5 score ranges from 0 to 10 with higher scores indicating worse thirst discomfort."}
+# knitr::include_graphics("figures/thirst-intensity.png")
+drake::readd(thirst_intensity_plot)
+```
+
+
+
+```{r globalthirst, fig.cap="Association between PTDS-5 and global thirst rating", eval=params}
+# knitr::include_graphics("figures/global-thirst.png")
+library(dplyr)
+drake::readd(global_thirst_plot)
+```
+
+Longer duration of fasting was not linearly associated with PTDS-5 scores. Likewise, the correlation between pain and PTDS-5 scores was not significant (Spearman's rho = `r round(drake::readd(pain_corr)$rho, 2)`; 95% CI = `r round(drake::readd(pain_corr)$CI_low, 2)` to `r round(drake::readd(pain_corr)$CI_high, 2)`).
+
+```{r fasting, fig.cap = "Association between PTDS-5 and duration of fasting"}
+# knitr::include_graphics("figures/fasting.png")
+drake::readd(fasting_duration_ptds_plot)
+```
+
+# Discussion
+
+Results indicate that the PTDS-5 is a reliable and precise way to order patients according to their thirst discomfort in the *pre-procedure* period. In addition, an acceptable accuracy for invariant item ordering was identified, meaning patients are likely to rank the PTDS-5 symptoms of thirst discomfort in the same way. As such, the item difficulty hierarchy, presented in Table \@ref(tab:tab2) can be used as a guide to easily determine which patients are experiencing worse thirst discomfort. The hierarchical pattern of responses to items in the Mokken scale is interpretable in terms of respondents more easily endorsing items related to a general desire to drink water through to first endorsing more specific symptoms related to dryness of the mouth and lips prior to endorsing discomfort associated with the sensations of 'thick' saliva and 'thick' tongue. In more practical terms, a patient who reports feeling bothered by a sensation that saliva is thick, could be interpreted as experiencing worse thirst discomfort than a patient who did not endorse any of the items lower down on the item difficulty hierarchy (i.e. 'my lips are dry' and 'my mouth is dry').
 
 The original (7-item) perioperative thirst-discomfort scale has previously been used to determine the relationship between thirst intensity and thirst-discomfort in the immediate postoperative period during anesthesia recovery.[@Pierotti_2018] In a non-probabilistic sample of 203 adult participants in post-operative recovery following elective, urgent and emergency surgeries, the investigators found no association between fasting duration, or patient age, and the intensity of thirst and degree of discomfort.[@Pierotti_2018] However, the mean fasting duration among participants was uniformly high (mean 16.2 [SD 8.7] hours), which may have prevented the researchers from discerning a correlation between fasting duration. Even in the subgroup of participant who reported 8 hours of fasting, all reported thirst.[@aroni2012assessment; @Pierotti_2018]
 
@@ -238,11 +242,11 @@ It should be noted that an investigation of the dimensionality of the 7-item PTD
 
 We did not observe an association between PTDS-5 and fasting duration for either food or fluids. This would suggest that it is important to assess thirst discomfort periodically, regardless of the duration of fasting. If thirst discomfort is present, and fasting is still indicated, interventions to alleviate symptoms should be implemented. There is a lack of evidence regarding the efficacy of any such interventions.
 
-### Limitations
+## Limitations
 
 Selection bias should be considered because a convenience sample was used for this study. Also, it is uncertain if similar results would be obtained for patients who are fasted prior to undergoing procedures in other settings. Only one patient was excluded from the analysis due to missing data, so it is unlikely attrition bias would have exerted a major influence on the results. Further research is required to evaluate the minimal detectable difference for the PTDS-5 as well as the minimal clinically important difference prior to use of this scale as an outcome measure in research.
 
-### Conclusion
+## Conclusion
 
 The items in the PTDS-5 form a reliable and precise way to order patients according to their thirst discomfort. Nurses may use this scale to assess the severity of thirst discomfort in patients who are fasted prior to procedures and initiate interventions according to individual needs.
 
@@ -267,12 +271,6 @@ The items in the PTDS-5 form a reliable and precise way to order patients accord
 
 
 
-```{r tab.cap="Participant characteristics", tab.id = 'tab1'}
-drake::loadd(summary_table)
-# gtsummary::as_flextable(summary_table)
-gtsummary::as_kable_extra(summary_table, booktabs = T)
-```
-
 
 
 
@@ -283,29 +281,11 @@ gtsummary::as_kable_extra(summary_table, booktabs = T)
 
 <!--BLOCK_LANDSCAPE_START--->
 
-```{r distribution, fig.cap = "Distribution of PTDS-5 scores"}
-# knitr::include_graphics("figures/distribution.png")
-drake::readd(distribution_plot)
-```
 
 
 
-```{r intensity, fig.cap="Association between PTDS-5 and thirst intensity. PTDS-5 score ranges from 0 to 10 with higher scores indicating worse thirst discomfort."}
-# knitr::include_graphics("figures/thirst-intensity.png")
-drake::readd(thirst_intensity_plot)
-```
 
 
 
-```{r globalthirst, fig.cap="Association between PTDS-5 and global thirst rating"}
-# knitr::include_graphics("figures/global-thirst.png")
-library(dplyr)
-drake::readd(global_thirst_plot)
-```
 
 
-
-```{r fasting, fig.cap = "Association between PTDS-5 and duration of fasting"}
-# knitr::include_graphics("figures/fasting.png")
-drake::readd(fasting_duration_ptds_plot)
-```

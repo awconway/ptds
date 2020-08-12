@@ -31,11 +31,12 @@ create_global_thirst_plot <- function(data,
     geom_beeswarm(groupOnX = FALSE, alpha = 0.5, size = 2) +
     labs(
       y = element_blank(),
-      x = "\nPTDS-5 (0-10; higher scores indicate worse thirst discomfort)"
+      x = "\nPTDS-5"
     ) +
     theme(
       legend.position = "none",
-      plot.title.position = "plot"
+      plot.title.position = "plot",
+      text = element_text(size=9)
     ) +
     geom_richtext(
       data = cor,

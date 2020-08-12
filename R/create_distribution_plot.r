@@ -9,7 +9,7 @@ create_distribution_plot <- function(data_ptds) {
         geom_histogram(binwidth = 0.5, fill = "#2a6ebb") +
         labs(
             y = "Count",
-            x = "\nPTDS-5 (range is 0 to 10; higher scores indicate worse thirst discomfort)"
+            x = "\nPTDS-5"
         ) +
         scale_x_continuous(
             breaks = seq(0, 10, by = 1)
@@ -19,7 +19,7 @@ create_distribution_plot <- function(data_ptds) {
             #panel.background = element_blank(),
             legend.position = "none",
             axis.ticks.x = element_blank(),
-            axis.ticks.y = element_blank()
-            #text = element_text(family = "BioRhyme")
+            axis.ticks.y = element_blank(),
+            text = element_text(size=9)
         )
 }
