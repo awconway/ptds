@@ -1,0 +1,187 @@
+\begin{thebibliography}{21}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Aguilar-Nascimento \emph{et~al.}(2014)Aguilar-Nascimento, Dias,
+  Dock-Nascimento, Correia, Campos, Portari-Filho, and Oliveira}]{de2014actual}
+Aguilar-Nascimento J, Dias A, Dock-Nascimento D, Correia M, Campos A,
+  Portari-Filho P, Oliveira S (2014).
+\newblock \enquote{Actual preoperative fasting time in Brazilian hospitals: the
+  {BIGFAST} multicenter study.}
+\newblock \emph{Therapeutics and Clinical Risk Management}, p. 107.
+\newblock \doi{10.2147/tcrm.s56255}.
+\newblock \urlprefix\url{https://doi.org/10.2147/tcrm.s56255}.
+
+\bibitem[{Aroni \emph{et~al.}(2012)Aroni, Nascimento, and
+  Fonseca}]{aroni2012assessment}
+Aroni P, Nascimento LAd, Fonseca LF (2012).
+\newblock \enquote{Assessment strategies for the management of thirst in the
+  post-anesthetic recovery room.}
+\newblock \emph{Acta Paulista de Enfermagem}, \textbf{25}(4), 530--536.
+\newblock
+  \urlprefix\url{https://pdfs.semanticscholar.org/76a0/a6cdf7ee0031bfe54b0a0f53e78143904d65.pdf}.
+
+\bibitem[{Carey \emph{et~al.}(2015)Carey, Conchin, and
+  Bloomfield-Stone}]{carey2015qualitative}
+Carey SK, Conchin S, Bloomfield-Stone S (2015).
+\newblock \enquote{A qualitative study into the impact of fasting within a
+  large tertiary hospital in Australia--the patients’ perspective.}
+\newblock \emph{Journal of clinical nursing}, \textbf{24}(13-14), 1946--1954.
+
+\bibitem[{Conchon \emph{et~al.}(2015)Conchon, Nascimento, Fonseca, and
+  Aroni}]{conchon2015perioperative}
+Conchon MF, Nascimento LAd, Fonseca LF, Aroni P (2015).
+\newblock \enquote{Perioperative thirst: an analysis from the perspective of
+  the Symptom Management Theory.}
+\newblock \emph{Revista da Escola de Enfermagem da USP}, \textbf{49}(1),
+  122--128.
+
+\bibitem[{Dobson \emph{et~al.}()Dobson, Chong, Chow, Flexman, Kurrek, Laflamme,
+  Lagacé, Stacey, and Thiessen}]{dobsonGuidelinesPracticeAnesthesia2018}
+Dobson G, Chong M, Chow L, Flexman A, Kurrek M, Laflamme C, Lagacé A, Stacey
+  S, Thiessen B (????).
+\newblock \enquote{Guidelines to the {{Practice}} of {{Anesthesia}} –
+  {{Revised Edition}} 2018.}
+\newblock \textbf{65}(1), 76--104.
+\newblock ISSN 0832-610X, 1496-8975.
+\newblock \doi{10.1007/s12630-017-0995-9}.
+\newblock \urlprefix\url{http://link.springer.com/10.1007/s12630-017-0995-9}.
+
+\bibitem[{Garcia \emph{et~al.}(2019)Garcia, Furuya, Conchon, Rossetto, Dantas,
+  and Fonseca}]{garcia2019}
+Garcia AKA, Furuya RK, Conchon MF, Rossetto EG, Dantas RAS, Fonseca LF (2019).
+\newblock \enquote{Goma de mascar mentolada no manejo da sede pré-operatória:
+  ensaio clínico randomizado.}
+\newblock \emph{Revista Latino-Americana de Enfermagem}, \textbf{27}.
+\newblock ISSN 1518-8345.
+\newblock \doi{10.1590/1518-8345.3070.3180}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1590/1518-8345.3070.3180}.
+
+\bibitem[{Hamid \emph{et~al.}(2014)Hamid, Aleem, Lau, Singh, McDonald,
+  Macdonald, Sastry, Arya, Bainbridge, Mudawi \emph{et~al.}}]{hamid2014pre}
+Hamid T, Aleem Q, Lau Y, Singh R, McDonald J, Macdonald JE, Sastry S, Arya S,
+  Bainbridge A, Mudawi T, \emph{et~al.} (2014).
+\newblock \enquote{Pre-procedural fasting for coronary interventions: is it
+  time to change practice?}
+\newblock \emph{Heart}, \textbf{100}(8), 658--661.
+
+\bibitem[{Ligtvoet \emph{et~al.}(2010)Ligtvoet, {van der Ark}, {te Marvelde},
+  and Sijtsma}]{Ligtvoet_2010}
+Ligtvoet R, {van der Ark} L, {te Marvelde} JM, Sijtsma K (2010).
+\newblock \enquote{Investigating an Invariant Item Ordering for Polytomously
+  Scored Items.}
+\newblock \emph{Educational and Psychological Measurement}, \textbf{70}(4),
+  578--595.
+\newblock \doi{10.1177/0013164409355697}.
+\newblock \urlprefix\url{https://doi.org/10.1177/0013164409355697}.
+
+\bibitem[{Madsen \emph{et~al.}(1998)Madsen, Brosnan, and
+  Nagy}]{madsen1998perioperative}
+Madsen M, Brosnan J, Nagy VT (1998).
+\newblock \enquote{Perioperative thirst: a patient perspective.}
+\newblock \emph{Journal of PeriAnesthesia Nursing}, \textbf{13}(4), 225--228.
+
+\bibitem[{Martins \emph{et~al.}(2017)Martins, Fonseca, and
+  Rossetto}]{Martins_2017}
+Martins PR, Fonseca LF, Rossetto EG (2017).
+\newblock \enquote{Developing and validating the Perioperative Thirst
+  Discomfort Scale.}
+\newblock \emph{Revista da Escola de Enfermagem da {USP}}, \textbf{51}(0).
+\newblock \doi{10.1590/s1980-220x2016029003240}.
+\newblock \urlprefix\url{https://doi.org/10.1590/s1980-220x2016029003240}.
+
+\bibitem[{{Milani Pavani} \emph{et~al.}(2016){Milani Pavani}, {Fahl Fonseca},
+  and {Ferrari Conchon}}]{milani2016thirst}
+{Milani Pavani} M, {Fahl Fonseca} L, {Ferrari Conchon} M (2016).
+\newblock \enquote{Thirst in Surgical Patients: Perceptions of the Nursing Team
+  in Inpatient Units.}
+\newblock \emph{Journal of Nursing UFPE/Revista de Enfermagem UFPE},
+  \textbf{10}(9).
+
+\bibitem[{Mokkink \emph{et~al.}(2010)Mokkink, Terwee, Patrick, Alonso,
+  Stratford, Knol, Bouter, and de~Vet}]{mokkink2010cosmin}
+Mokkink LB, Terwee CB, Patrick DL, Alonso J, Stratford PW, Knol DL, Bouter LM,
+  de~Vet HC (2010).
+\newblock \enquote{The COSMIN study reached international consensus on
+  taxonomy, terminology, and definitions of measurement properties for
+  health-related patient-reported outcomes.}
+\newblock \emph{Journal of clinical epidemiology}, \textbf{63}(7), 737--745.
+
+\bibitem[{Molenaar and Sijtsma(2000)}]{molenaar2000mps5}
+Molenaar IW, Sijtsma K (2000).
+\newblock \enquote{MPS5 for Windows. A program for Mokken scale analysis for
+  polytomous items.}
+\newblock
+  \urlprefix\url{https://research.tilburguniversity.edu/en/publications/mps5-for-windows-a-program-for-mokken-scale-analysis-for-polytomo}.
+
+\bibitem[{Nascimento \emph{et~al.}(2020)Nascimento, Garcia, Conchon, Aroni,
+  Pierotti, Martins, Nakaya, and Fonseca}]{nascimento2020}
+Nascimento LAd, Garcia AKA, Conchon MF, Aroni P, Pierotti I, Martins PR, Nakaya
+  TG, Fonseca LF (2020).
+\newblock \enquote{Advances in the Management of Perioperative Patients’
+  Thirst.}
+\newblock \emph{AORN Journal}, \textbf{111}(2), 165–179.
+\newblock ISSN 0001-2092.
+\newblock \doi{10.1002/aorn.12931}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1002/aorn.12931}.
+
+\bibitem[{Osborne(2002)}]{osborne2002preoperative}
+Osborne S (2002).
+\newblock \enquote{Preoperative fasting procedures: let's use the evidence.}
+\newblock \emph{Collegian}, \textbf{9}(4), 40--42.
+\newblock \doi{10.1016/s1322-7696(08)60433-3}.
+
+\bibitem[{Perng and Watson(2012)}]{perng2012construct}
+Perng SJ, Watson R (2012).
+\newblock \enquote{Construct validation of the nurse cultural competence scale:
+  A hierarchy of abilities.}
+\newblock \emph{Journal of Clinical Nursing}, \textbf{21}(11-12), 1678--1684.
+
+\bibitem[{Pierotti \emph{et~al.}(2018)Pierotti, Fracarolli, Fonseca, and
+  Aroni}]{Pierotti_2018}
+Pierotti I, Fracarolli IFL, Fonseca LF, Aroni P (2018).
+\newblock \enquote{Evaluation of the intensity and discomfort of perioperative
+  thirst.}
+\newblock \emph{Escola Anna Nery}, \textbf{22}(3).
+\newblock \doi{10.1590/2177-9465-ean-2017-0375}.
+\newblock \urlprefix\url{https://doi.org/10.1590/2177-9465-ean-2017-0375}.
+
+\bibitem[{{R Core Team}(2020)}]{rcore2020}
+{R Core Team} (2020).
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria.
+\newblock \urlprefix\url{https://www.R-project.org/}.
+
+\bibitem[{Sorita \emph{et~al.}(2015)Sorita, Thongprayoon, Ahmed, Bates,
+  Ratelle, Rieck, Devalapalli, Issa, Shah, Lalama, Wang, Murad, and
+  Kashiwagi}]{sorita2015frequency}
+Sorita A, Thongprayoon C, Ahmed A, Bates RE, Ratelle JT, Rieck KM, Devalapalli
+  AP, Issa M, Shah RM, Lalama MA, Wang Z, Murad MH, Kashiwagi DT (2015).
+\newblock \enquote{Frequency and Appropriateness of Fasting Orders in the
+  Hospital.}
+\newblock \emph{Mayo Clinic Proceedings}, \textbf{90}(9), 1225--1232.
+\newblock \doi{10.1016/j.mayocp.2015.07.013}.
+\newblock \urlprefix\url{https://doi.org/10.1016/j.mayocp.2015.07.013}.
+
+\bibitem[{Spitz \emph{et~al.}(2016)Spitz, Chaves, and Peres}]{spitz2017impact}
+Spitz D, Chaves G, Peres W (2016).
+\newblock \enquote{Impact of perioperative care on the post-operative recovery
+  of women undergoing surgery for gynaecological tumours.}
+\newblock \emph{European Journal of Cancer Care}, \textbf{26}(6), e12512.
+\newblock \doi{10.1111/ecc.12512}.
+\newblock \urlprefix\url{https://doi.org/10.1111/ecc.12512}.
+
+\bibitem[{Watson \emph{et~al.}(2008)Watson, Deary, and
+  Shipley}]{watson2008hierarchy}
+Watson R, Deary IJ, Shipley B (2008).
+\newblock \enquote{A hierarchy of distress: Mokken scaling of the GHQ-30.}
+\newblock \emph{Psychological medicine}, \textbf{38}(4), 575--580.
+
+\end{thebibliography}

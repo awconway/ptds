@@ -1,0 +1,15 @@
+---
+toname: Applied Nursing Research
+toaddress: Editorial Board
+opening: To the editor, 
+closing: Regards,
+spacing: 1
+output: ConwayLetterTemplate::letter
+---
+
+On behalf of my co-authors, I am pleased to submit our manuscript entitled “Mokken scale analysis of the perioperative thirst discomfort scale".
+
+Prior research indicates that most patients do not spontaneously verbalize thirst discomfort even when experiencing intense distress. As such, providing perioperative nurses with a validated tool that accurately measures thirst discomfort is vital. Results from our study provide additional insight regarding the validity of perioperative thirst discomfort scale in patients who were fasted before diagnostic or interventional procedures. We have not published this data previously.
+
+
+

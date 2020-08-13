@@ -41,8 +41,8 @@ get_analysis_plan <- function() {
     data_ptds = add_ptds_total(ptds5, participation_df), # data with total ptds score added
     summary_table = create_summary_table(data_ptds),
     global_thirst_plot = create_global_thirst_plot(
-      data = data_ptds,
-      global_thirst_corr = global_thirst_corr
+      data = data_ptds
+      # global_thirst_corr = global_thirst_corr
     ),
     global_thirst_plot_png = ggsave(
       plot = global_thirst_plot,
@@ -67,8 +67,8 @@ get_analysis_plan <- function() {
     ),
 
     fasting_duration_ptds_plot = create_fasting_duration_ptds_plot(
-      data_ptds,
-      fluids_corr, food_corr
+      data_ptds
+      # fluids_corr, food_corr
     ),
 
     fasting_duration_ptds_plot_png = ggsave(

@@ -4,7 +4,7 @@
 \alias{create_global_thirst_plot}
 \title{}
 \usage{
-create_global_thirst_plot(data, global_thirst_corr)
+create_global_thirst_plot(data)
 }
 \value{
 
