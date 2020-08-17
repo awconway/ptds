@@ -149,17 +149,17 @@ get_analysis_plan <- function() {
     #  device = "svg"
     #),
 
-    # manuscript = target(
-    #   command = {
-    #     rmarkdown::render(knitr_in("manuscript/index.Rmd"))
-    #     file_out("manuscript/index.docx")
-    #   }
-    # ),
-    manuscript_pdf = target(
+    manuscript = target(
       command = {
-        rmarkdown::render(knitr_in("manuscript/manuscript.Rmd"))
-        file_out("manuscript/manuscript.pdf")
+        rmarkdown::render(knitr_in("manuscript/index.Rmd"))
+        file_out("manuscript/index.docx")
       }
-    )
+    ),
+    # manuscript_pdf = target(
+    #   command = {
+    #     rmarkdown::render(knitr_in("manuscript/manuscript.Rmd"))
+    #     file_out("manuscript/manuscript.pdf")
+    #   }
+    # )
   )
 }

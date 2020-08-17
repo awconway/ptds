@@ -55,9 +55,6 @@ output:
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE, fig.retina = 5)
-# tint options
-library(tint)
-knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'))
 options(htmltools.dir.version = FALSE)
 library(drake)
 library(magrittr)
@@ -236,17 +233,17 @@ Fig. \@ref(fig:fasting) Association between PTDS-5 and duration of fasting
 
 ```{r tab.cap="Participant characteristics", tab.id = 'tab1'}
 drake::loadd(summary_table)
-# gtsummary::as_flextable(summary_table)
-gtsummary::as_kable_extra(summary_table, booktabs = T)
+gtsummary::as_flextable(summary_table)
+# gtsummary::as_kable_extra(summary_table, booktabs = T)
 ```
 
 \pagebreak
 
 ```{r tab.id = "tab2", tab.cap= "Item hierarchy of the PTDS-5"}
-# flextable::flextable(drake::readd(item_hierarchy_df_ptds5)) %>% 
-#   autofit()
-drake::readd(item_hierarchy_df_ptds5) %>% 
-  kableExtra::kable(booktabs = T)
+flextable::flextable(drake::readd(item_hierarchy_df_ptds5)) %>%
+  autofit()
+# drake::readd(item_hierarchy_df_ptds5) %>% 
+#   kableExtra::kable(booktabs = T)
 ```
 
 <!---BLOCK_MULTICOL_START--->
@@ -288,46 +285,46 @@ drake::readd(fasting_duration_ptds_plot)
 
 ```{r tab.id='Hvaluesptds7', tab.cap.pre="Appendix Table ", tab.cap = "Homogeneity values (and standard errors) for all items in the PTDS"}
 drake::readd(H_values_ptds7_table) %>% 
-  # flextable::flextable() %>% 
-  # autofit()
-  kableExtra::kable(booktabs = T)
+  flextable::flextable() %>%
+  autofit()
+  # kableExtra::kable(booktabs = T)
 ```
 
 \pagebreak
 
 ```{r tab.id='monotonicity', tab.cap.pre="Appendix Table ", tab.cap="monotonicity with default minsize"}
 
-# flextable::flextable(drake::readd(monotonicity_df_ptds6_table)) %>%  
-#   autofit()
- drake::readd(monotonicity_df_ptds6_table) %>% 
-kableExtra::kable(booktabs = T)
+flextable::flextable(drake::readd(monotonicity_df_ptds6_table)) %>%
+  autofit()
+#  drake::readd(monotonicity_df_ptds6_table) %>% 
+# kableExtra::kable(booktabs = T)
 ```
 
 \pagebreak
 
 ```{r tab.id='aisp', tab.cap.pre="Appendix Table ", tab.cap = "aisp for increasing H thresholds (*c*)"}
-# flextable::flextable(drake::readd(aisp)) %>% 
-  # autofit()
-drake::readd(aisp) %>% 
-  kableExtra::kable(booktabs = T)
+flextable::flextable(drake::readd(aisp)) %>%
+autofit()
+# drake::readd(aisp) %>% 
+#   kableExtra::kable(booktabs = T)
 ```
 
 \pagebreak
 
 ```{r tab.id='iioptds6', tab.cap.pre="Appendix Table ", tab.cap = "Invariant item ordering for PTDS-6"}
 drake::readd(iio_ptds6_table) %>% 
-  # flextable() %>% 
-  # autofit()
-  kableExtra::kable(booktabs = T)
+  flextable() %>%
+  autofit()
+  # kableExtra::kable(booktabs = T)
 ```
 
 \pagebreak
 
 ```{r tab.id='iioptds5', tab.cap.pre="Appendix Table ", tab.cap = "Invariant item ordering for PTDS-5"}
 drake::readd(iio_ptds5_table) %>%
-    # flextable() %>%
-    # autofit()
-  kableExtra::kable(booktabs = T)
+    flextable() %>%
+    autofit()
+  # kableExtra::kable(booktabs = T)
 ```
 
 <!---BLOCK_LANDSCAPE_STOP--->
