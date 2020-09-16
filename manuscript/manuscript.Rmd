@@ -1,5 +1,5 @@
 ---
-title: Mokken scale analysis of the perioperative thirst discomfort scale
+title: Validating the perioperative thirst discomfort scale for measuring thirst discomfort prior to procedures
 author:
   - name: ""
 date_subtitle: "Blinded for peer review"
@@ -212,7 +212,7 @@ The original (7-item) perioperative thirst-discomfort scale has previously been 
 
 It should be noted that an investigation of the dimensionality of the 7-item PTDS had not been performed prior to our study. A uni-dimensional solution was identified in our analysis. This should be expected considering the small number of items that were evaluated.
 
-We did not observe an association between PTDS-5 and fasting duration for either food or fluids. This would suggest that it is important to assess thirst discomfort periodically, regardless of the duration of fasting. If thirst discomfort is present, and fasting is still indicated, interventions to alleviate symptoms should be implemented. There is a lack of evidence regarding the efficacy of interventions to alleviate perioperative thirst discomfort. However, recent randomized controlled trials have identified clinically relevant redictions in thirst discomfort with menthol chewing gum and 30mL menthol popsicles [@garcia2019; @nascimento2020].
+We did not observe an association between PTDS-5 and fasting duration for either food or fluids. This would suggest that it is important to assess thirst discomfort periodically, regardless of the duration of fasting. If thirst discomfort is present, and fasting is still indicated, interventions to alleviate symptoms should be implemented. There is a lack of evidence regarding the efficacy of interventions to alleviate perioperative thirst discomfort. However, recent randomized controlled trials have identified clinically relevant reductions in thirst discomfort with menthol chewing gum and 30mL menthol popsicles [@garcia2019; @nascimento2020].
 
 ## Limitations
 
