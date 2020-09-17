@@ -4,7 +4,7 @@ author:
   - name: ""
 date_subtitle: "Blinded for peer review"
 lead_author_surname: Blinded for peer review
-doi_footer: "Pre-print submitted to *Applied Nursing Research*"
+doi_footer: ""
 abstract: |
   *Introduction:* Thirst discomfort is common because patients are required to undergo long periods of fasting before medical and surgical procedures. The aim of this study was to examine the validity and reliability of the perioperative thirst discomfort scale (PTDS) for measuring thirst discomfort before procedures.
   *Methods:* Fasting patients who were scheduled for an elective cardiac or interventional radiology procedure were included in a prospective observational study. Mokken scaling analysis was used to investigate the dimensionality and hierarchical nature of the PTDS. PTDS scores were compared with fasting duration to evaluate construct validity. Convergent validity was evaluated by comparing the PTDS with global thirst discomfort and thirst intensity ratings.
