@@ -106,14 +106,14 @@ get_analysis_plan <- function() {
 
     # deviations
 
-    #coded_descriptions = read.csv(
-    #  here::here("Analysis/fasting_descriptions_complete.csv")
-    #),
+    coded_descriptions = read.csv(
+     here::here("data/fasting_descriptions_complete.csv")
+    ),
 
-    #deviation_plot = create_deviation_plot(
-    #  data_ptds = data_ptds,
-    #  coded_descriptions = coded_descriptions
-    #),
+    deviation_plot = create_deviation_plot(
+     data_ptds = data_ptds,
+     coded_descriptions = coded_descriptions
+    ),
     #deviation_plot_png = ggsave(
     #  plot = deviation_plot,
     #  filename = here("plots", "fasting-deviation-plot.png"),

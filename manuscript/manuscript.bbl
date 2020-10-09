@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{23}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -43,16 +43,15 @@ Conchon MF, Nascimento LAd, Fonseca LF, Aroni P (2015).
 \newblock \emph{Revista da Escola de Enfermagem da USP}, \textbf{49}(1),
   122--128.
 
-\bibitem[{Dobson \emph{et~al.}()Dobson, Chong, Chow, Flexman, Kurrek, Laflamme,
-  Lagacé, Stacey, and Thiessen}]{dobsonGuidelinesPracticeAnesthesia2018}
-Dobson G, Chong M, Chow L, Flexman A, Kurrek M, Laflamme C, Lagacé A, Stacey
-  S, Thiessen B (????).
-\newblock \enquote{Guidelines to the {{Practice}} of {{Anesthesia}} –
-  {{Revised Edition}} 2018.}
-\newblock \textbf{65}(1), 76--104.
-\newblock ISSN 0832-610X, 1496-8975.
-\newblock \doi{10.1007/s12630-017-0995-9}.
-\newblock \urlprefix\url{http://link.springer.com/10.1007/s12630-017-0995-9}.
+\bibitem[{Dobson \emph{et~al.}(2020)Dobson, Chow, Filteau, Flexman, Hurdle,
+  Kurrek, Milkovich, Perrault, Sparrow, Swart
+  \emph{et~al.}}]{dobsonGuidelinesPracticeAnesthesia2018}
+Dobson G, Chow L, Filteau L, Flexman A, Hurdle H, Kurrek M, Milkovich R,
+  Perrault MA, Sparrow K, Swart PA, \emph{et~al.} (2020).
+\newblock \enquote{Guidelines to the practice of anesthesia--revised edition
+  2020.}
+\newblock \emph{Canadian Journal of Anesthesia/Journal canadien
+  d'anesth{\'e}sie}, \textbf{67}(1), 64--99.
 
 \bibitem[{Garcia \emph{et~al.}(2019)Garcia, Furuya, Conchon, Rossetto, Dantas,
   and Fonseca}]{garcia2019}
@@ -71,6 +70,13 @@ Hamid T, Aleem Q, Lau Y, Singh R, McDonald J, Macdonald JE, Sastry S, Arya S,
 \newblock \enquote{Pre-procedural fasting for coronary interventions: is it
   time to change practice?}
 \newblock \emph{Heart}, \textbf{100}(8), 658--661.
+
+\bibitem[{Lee \emph{et~al.}(2020)Lee, Liu, Cheng, Chiu, Hsu, and
+  Chao}]{lee2020prevalence}
+Lee CW, Liu ST, Cheng YJ, Chiu CT, Hsu YF, Chao A (2020).
+\newblock \enquote{Prevalence, risk factors, and optimized management of
+  moderate-to-severe thirst in the post-anesthesia care unit.}
+\newblock \emph{Scientific Reports}, \textbf{10}(1), 1--10.
 
 \bibitem[{Ligtvoet \emph{et~al.}(2010)Ligtvoet, {van der Ark}, {te Marvelde},
   and Sijtsma}]{Ligtvoet_2010}
@@ -183,5 +189,16 @@ Spitz D, Chaves G, Peres W (2016).
 Watson R, Deary IJ, Shipley B (2008).
 \newblock \enquote{A hierarchy of distress: Mokken scaling of the GHQ-30.}
 \newblock \emph{Psychological medicine}, \textbf{38}(4), 575--580.
+
+\bibitem[{{Watson} \emph{et~al.}(2018){Watson}, {Egberink}, {Kirke},
+  {Tendeiro}, and {Doyle}}]{watson2018}
+{Watson} R, {Egberink} I, {Kirke} L, {Tendeiro} J, {Doyle} F (2018).
+\newblock \enquote{What are the minimal sample size requirements for Mokken
+  scaling? An empirical example with the Warwick- Edinburgh Mental Well-Being
+  Scale.}
+\newblock \emph{Health Psychology and Behavioral Medicine}, \textbf{6}(1),
+  203--213.
+\newblock \doi{10.1080/21642850.2018.1505520}.
+\newblock \urlprefix\url{http://dx.doi.org/10.1080/21642850.2018.1505520}.
 
 \end{thebibliography}

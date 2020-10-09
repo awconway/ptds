@@ -1,15 +1,109 @@
 ---
-toname: Applied Nursing Research
-toaddress: Editorial Board
-opening: To the editor, 
-closing: Regards,
-spacing: 1
-output: ConwayLetterTemplate::letter
+# toname: Journal of Radiology Nursing
+# toaddress: Editorial Board
+# opening: To the editor, 
+# closing: Regards,
+# spacing: 1
+# output: ConwayLetterTemplate::letter
+output: pdf_document
 ---
 
-On behalf of my co-authors, I am pleased to submit our manuscript entitled “Mokken scale analysis of the perioperative thirst discomfort scale".
+Thank you for providing us with the opportunity to revise out manuscript. We have made revisions to the paper and provide detailed responses to the reviewers' comments below.
 
-Prior research indicates that most patients do not spontaneously verbalize thirst discomfort even when experiencing intense distress. As such, providing perioperative nurses with a validated tool that accurately measures thirst discomfort is vital. Results from our study provide additional insight regarding the validity of perioperative thirst discomfort scale in patients who were fasted before diagnostic or interventional procedures. We have not published this data previously.
+## Reviewer 1
 
+*Minor note not affecting publication decision: Your acronym (PTDS) is very close to PTSD (post-traumatic stress disorder): would you consider shortening it to TDS (thirst discomfort score)? Just a suggestion in an effort not to confuse this with something else widely noted in the professional literature.*
 
+> Thank you for the suggestion. We have chosen not to remove the 'P' as it stands for perioperative, which is an important concept for this scale.
 
+*Pages 1-2: Excellent introduction, clear, easy to understand, prepares the reader for the balance of the paper.*
+
+> Thank you
+
+*Page 3 Line 54: You wrote, "The Cronbach alpha score was 0.91." This should be in the results section, it is the only outcome datum you have in the methods section.*
+
+> This Cronbach alpha reported in the methods section was that reported by the previous validation study of the original version of the Perioperative Thirst Discomfort Scale. We had already provided an overview of the previous validation studies for the scale in the Introduction so we have removed it from the methods to reduce duplication of content.
+
+*Page 4 line 241 you wrote, "To investigate construct validity we hypothesized that higher scores on the PTDS would be associated with greater fasting duration." Very nicely done, this is helpful*
+
+> Thank you
+
+*Page 4 line 253 you wrote, "All data and R code, along with instructions for how to completely reproduce results of the analyses, is available here." This is quite helpful allowing for replication of your study.*
+
+> Thank you
+
+*Page 6 line 318 you wrote, "As shown in Figure 2, there was a positive correlation between PTDS-5 scores and the global thirst discomfort rating (tau = 0.54; 95% CI = 0.43 to 0.63). The correlation between PTDS-5 scores and thirst intensity was also high (tau =0.49; 95% CI = 0.38 to 0.59)." Were these correlations statistically significant? Therefore, since n = 193, then for your first tau, the z-score exceeds 11! Very low p-score (p \< 0.0001), and for the second test the z-score exceeds 10, also a very low p score...I'd go back to your software and doublecheck my math, but would include these points.*
+
+> Your math is correct - the p-values for these correlations are very low. We prefer however to report the confidence intervals for the correlations as they are more informative than the very low p-value. Confidence intervals have been reported for all correlations.
+
+*Page 6, line 329, you wrote, "Longer duration of fasting was not linearly associated with PTDS-5 scores for fluids (Spearman's rho = 0.1; 95% CI = -0.05 to 0.23) or food (Spearman's rho = 0.13; 95% CI = -0.01 to 0.27)." Did you look at curvilinear or exponential relationships? Just curious, as not all physiologic mechanisms (indeed, quite few) are linear in nature. Your scatterplots in figure 3 reflect the lack of linear association but there might be a sine wave type line from lower left to upper right, you might consider checking this.*
+
+> Thank you for the suggestion. We have not explored other potential relationships between fasting duration and PTDS-5 scores because this analysis was performed to test our stated hypothesis to evaluate construct validity that higher scores on the PTDS-5 would be associated with longer fasting duration. We believe a linear association is correct to evaluate this correlation.
+
+*Page 7 line 382 you wrote, "We did not observe an association between PTDS-5 and fasting duration for either food or fluids. This would suggest that it is important to assess thirst discomfort periodically, regardless of the duration of fasting. If thirst discomfort is present, and fasting is still indicated, interventions to alleviate symptoms should be implemented." This is an excellent take home message for your reader, very practical and useful.*
+
+> Thank you very much for your detailed review and suggestions for our paper.
+
+*Overall: this could go to press as is...I would add the p scores and run the scatterplot curves myself, but that does not preclude publication of the MS. Very nicely done.*
+
+## Reviewer 2
+
+*Thank you for the opportunity to review your document. This is an interesting study and is well-written. Just a few issues that need attention.*
+
+*Page 1, line 12 - I would use a newer reference unless this is a landmark publication.*
+
+> There is surprisingly little research on the patient experience of thirst in the perioperative literature. We have no reason to believe that the patient experience of thirst before surgery has changed since this paper was published because excessive fasting prior to procedures is still prevalent, as demonstrated in our study and the other recent studies we have cited.
+
+*Page 1, line 15 - See reference below. If you have an article that is not dated, (n.d.) is used.*
+
+*Dobson G, Chow L, Filteau L, Flexman A, Hurdle H, Kurrek M, Milkovich R, Perrault MA, Sparrow K, Swart PA, Wong M. Guidelines to the Practice of Anesthesia - Revised Edition 2020. Can J Anaesth. 2020 Jan;67(1):64-99. doi: 10.1007/s12630-019-01507-4. Epub 2019 Nov 27.*
+
+> The date for this reference has been corrected
+
+*Page 1, line 22 - I would reword this sentence. It reads disjointed.*
+
+> Changed to: "It is not common for fasting instructions to be updated even when there are significant delays in procedure start time. "
+
+*Page 1, line 26-34 - I would agree with the thesis of this paragraph if it was written before 2017; however, the fasting guidelines dramatically changed in 2017 and all these articles predate the change. I would provide more recent evidence that patients are fasting for long periods despite the changes. Also, you should discuss what the current fasting recommendations are. The current ASA fasting guidelines allow for clear liquids up to 2 hours before the procedure so I would assume that 12.8 hours average fasting would decrease. NOTE: If long fasting times are specific to your institution, you would need to disclose this to support why this study was important to perform or even the utility of the instrument.*
+
+> Excessive pre-procedural fasting is a long-standing issue, which by no means is specific to the institution in which this study was conducted. Guidelines from the American Society of Anesthesiology as far back as 1999 recommended 2 hour fasting for clear fluids and 6 hours for a light meal (for healthy patients who are undergiong elective procedures. (Practice Guidelines for Preoperative Fasting and the Use of Pharmacologic Agents to Reduce the Risk of Pulmonary Aspiration: Application to Healthy Patients Undergoing Elective Procedures: A Report by the American Society of Anesthesiologists Task Force on Preoperative Fasting. Anesthesiology. 1999;90(3):896-905.)
+
+*Page 2, line 52-75 - I would explain in more detail the limitations of the Martins' study. For example, postoperative instrument use is confounded by the surgical procedure where insensible fluid losses can occur or the effect of medications like glycopyrrolate have on thirst. This will validate the aim of your study. NOTE: I would clarify with the authors of the Martins' study that this was indeed only used and validated postoperatively. I read the article and it is unclear to me whether they performed ALL instrument interviewing in the postoperative period.*
+
+> We have included some additional content to describe the potential influence of events that occur during surgery on the psychometric properties of the PTDS:
+>
+> "It should be noted that the initial validation of the PTDS was conducted in one specific point in the perioperative journey (i.e. post-surgical patients). The psychometric properties of the scale may be influenced by events that occur during the surgical procedure, such as fluid loss and administrations of medications that induce thirst, such as glycopyrrolate. A recent large study showed that use of glycopyrrolate was an independent risk factor for moderate to severe post-operative thirst.(Lee et al., 2020) As such, validation of the scale for measuring thirst discomfort before procedures is required."
+>
+> It stated in the article by Martins et al, that participants were recruited from the Post-Anesthetic Care Unit.
+
+*Page 2, line 102 - I would write this in paragraph form or put it into a table.*
+
+> Converted to a paragraph:
+>
+> "Patients were not eligible for the study if they were under 16 years of age, scheduled for an emergency procedure, unable to understand or speak English (unless a translator was available) or if the nurse in pre-procedure bay considered that there was insufficient time prior to anticipated commencement of the procedure for participation in the study."
+
+*Page 3, line 135 - Need reference and it would be nice to actually have a visual depicting the instrument somewhere in the article.*
+
+> We have included the reference to the initial scale validation study. We have also provided a visual of the PTDS-5 (Table 3).
+
+*Page 4, line 256 - Is there any reason that recruiting stopped at 198? An explanation as to how you came about this sample size is warranted. A recent article discussing sample size choice and Mokken scaling have been published. (see attachment)*
+
+> The sample size was decided upon in terms of the resources available. We have added to the statistics section that a formal sample size calculation was not conducted.
+
+*Page 7, line 396 - You may want to note that sample size may be an issue.*
+
+> We have included a comment in the limitations section about the potential that the sample size was insufficient:
+>
+> "A recent study empirically evaluated the sample size required for a scale and found that a minimum of 250 participants would be required to establish scalability of the whole scale.(Watson et al., 2018) It was unclear, however, if this minimum threshold would apply to other scales.
+
+*Page 8, line 409 - This is a strong statement which I believe needs to be reworded due to issues related to external validity. I would use "may provide a way to measure thirst" instead of what is written.*
+
+> Changed to 'may provide'.
+
+*The main issue I struggle with is the utility of this instrument especially with new fasting guidelines. Some would suggest updating your NPO strategies. I can see reordering patients as its primary use making it indeed important in that context. However, I would provide more compelling evidence as to why measuring thirst and case reordering is needed in your background section.*
+
+> We totally agree that NPO strategies should be addressed in order to reduce the potential for thirst discomfort in patients scheduled for procedures. Unfortunately, this is a difficult problem to solve (Hewson, David W., and Iain Moppett. "Preoperative fasting and prevention of pulmonary aspiration in adults: research feast, quality improvement famine."British Journal of Anaesthesia 124.4 (2020): 361-363.) We conducted this study to validate the PTDS as the first step in an ongoing program of research aiming to address this issue. However, we believe that for the purposes of this current paper, it is best to restrict the discussion to the validation of the scale rather than about the need to address the causes of thirst.
+>
+> We hadn't considered the potential that cases could be re-ordered based on severity of thirst, but agree this is one way that standardized assessment of thirst discomfort could be useful for practice. We have added content to the discussion:
+>
+> "One additional potential course of action could be to rearrange the order of procedures on a schedule based on results of periodic thirst discomfort assessments using the PTDS. For example, circumstance may arise where a patient who reports severe thirst discomfort is scheduled to have their procedure later in the day than a patient who is not currently bothered by thirst symptoms. Reordering the procedure schedule would reduce the duration of fasting for the patient who is bothered by symptoms of thirst. Further research would be required to confirm the effectiveness of this strategy in practice on overall patient satisfaction."

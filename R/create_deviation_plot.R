@@ -229,7 +229,7 @@ create_deviation_plot <- function(data_ptds, coded_descriptions) {
             strip.background = element_blank(),
             plot.title = element_markdown(size = 14, margin = margin(0, 0, 20, 0)),
             plot.title.position = "plot",
-                      text = element_text(family = "BioRhyme", size = 18)
+                      text = element_text( size = 18)
 
         )
 
