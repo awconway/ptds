@@ -22,8 +22,10 @@ create_deviation_plot <- function(data_ptds, coded_descriptions) {
             npo_hrsprior == 1 ~ 3,
             npo_dinner == 1 ~ 1,
             separate_fooddrink == 1 ~ 4,
-            unclear_patient == 1 ~ 6,
-            missing == 1 ~ 7
+            # unclear_patient == 1 ~ 6,
+            # missing == 1 ~ 7
+            unclear_patient == 1 ~ 1,
+            missing == 1 ~ 1
         )) %>%
         mutate(fasting_type_text = case_when(
             fasting_type %in% 1 ~ "\"No food or drink after midnight\"",
@@ -185,32 +187,33 @@ create_deviation_plot <- function(data_ptds, coded_descriptions) {
             labels = c("2 hr. recomm. \nfor fluids", "6 hr. recomm. \nfor food")
         ) +
         labs(
-            title = "**Deviation from recommended fasting durations for <span style='color:dodgerblue'>fluids (2 hours)</span> and <span style='color:orangered'>food (6 hours)</span> according to type<br> of instructions received**",
+            title = "**Deviation from recommended fasting durations for <span style='color:dodgerblue'>fluids (2 hours)</span> and <span style='color:orangered'>food (6 hours)</span> according to type of instructions received**",
             y = element_blank()
         ) +
-        #geom_curve(
-        #    data = highlight,
-        #    aes(
-        #        xend = deviation + 0,
-        #        yend = y - 0.5,
-        #        x = deviation,
-        #        y = y - 80
-        #    ), # coordinates for arrow
-        #    curvature = .15,
-        #    arrow = arrow(length = unit(2, "mm"))
-        #) +
-        #geom_label(
-        #    data = highlight,
-        #    aes(
-        #        x = deviation - 8,
-        #        y = y - 80
-        #    ),
-        #    label = paste0(
-        #        "This patient was fasted ",
-        #        round(highlight$deviation),
-        #        " hours\n longer than required"
-        #    ), hjust = "center"
-        #) +
+        geom_curve(
+           data = highlight,
+           aes(
+               xend = deviation + 0,
+               yend = y - 0.5,
+               x = deviation-2,
+               y = y - 83.5
+           ), # coordinates for arrow
+           curvature = .25,
+           arrow = arrow(length = unit(2, "mm"))
+        ) +
+        geom_label(
+           data = highlight,
+           aes(
+               x = deviation - 12,
+               y = y - 80
+           ),
+           label = paste0(
+               "This patient was fasted ",
+               round(highlight$deviation),
+               " hours longer than required"
+           ), hjust = "center",
+        size = 6
+        ) +
         theme(
             panel.grid.minor.y = element_blank(),
             panel.grid.major.y = element_blank(),
@@ -218,8 +221,8 @@ create_deviation_plot <- function(data_ptds, coded_descriptions) {
             axis.ticks.x = element_blank(),
             axis.title.y = element_blank(),
             axis.ticks.y = element_blank(),
-            axis.text.x = element_text(size = 12),
-            axis.text.y = element_text(size = 12),
+            axis.text.x = element_text(size = 18),
+            axis.text.y = element_text(size = 18),
             panel.background = element_blank(),
             panel.grid.major.x = element_line(colour = alpha(1, 0.075)),
             panel.grid.minor.x = element_line(colour = alpha(1, 0.05)),
@@ -227,7 +230,7 @@ create_deviation_plot <- function(data_ptds, coded_descriptions) {
             legend.position = "none",
             strip.text.x = element_blank(),
             strip.background = element_blank(),
-            plot.title = element_markdown(size = 14, margin = margin(0, 0, 20, 0)),
+            plot.title = element_markdown(size = 18, margin = margin(0, 0, 20, 0)),
             plot.title.position = "plot",
                       text = element_text( size = 18)
 
